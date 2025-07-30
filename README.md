@@ -1,5 +1,5 @@
 # My Personal Website
-[danielepaletti.com](https://www.danielepaletti.com)
+[dpaletti.com](https://www.dpaletti.com)
  
 This **website works without JS**.
 
