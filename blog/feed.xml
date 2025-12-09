@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <title>Daniele Paletti - blog</title>
   <subtitle>Latest articles.</subtitle>
-  <link href="https://dpaletti.com/html/blog/feed.xml" rel="self" />
+  <link href="https://dpaletti.com/blog/feed.xml" rel="self" />
   <link href="https://dpaletti.com/blog/" />
   <updated>2025-02-25T00:00:00Z</updated>
   <id>https://dpaletti.com/blog/</id>
