@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="fediverse:creator" content="@dpaletti@social.coop">
+
+<head>
+    <link rel="stylesheet" href="../../../css/stylesheet.css">
+    <link rel="icon" type="image/x-icon" href="../../../assets/favicon.ico">
+    <title>Sustainable Mobility - Daniele Paletti</title>
+</head>
+
+
+<body>
+
+    <header>
+        <a href="../../.." class="navbar-logo">
+            <img src="../../../assets/portfolio_logo.svg">
+        </a>
+        <ul class="navbar-links">
+            <li class="navbar-item yellow"> <a class="disable-jquery-coloring navbar-link" href="../../../blog/index.html"> blog</a></li>
+            <li class="navbar-item blue"> <a class="disable-jquery-coloring navbar-link" href="../../../projects/index.html"> projects</a></li>
+            <li class="navbar-item red"> <a class="disable-jquery-coloring navbar-link" href="../../../about/index.html"> about</a></li>
+        </ul>
+    </header>
+
+    
+<div class="left-aligned" style="margin-bottom: 5vh">
+    <span class="page-title">
+        SMeS: Secure Mobility in eScooters
+    </span>
+    <div class="under-title viewport-margin">
+        <a href="https://github.com/DPaletti/mida_acv" class="disable-jquery-coloring link blue" style="font-size: calc(0.6vw + 0.8vh);">
+            github
+        </a>
+        
+    </div>
+        <span class="second-level-header">
+            Why  
+        </span>
+        <p> 
+            Many people share e-scooter rides which makes them a very dangerous vehicle.
+            Therefore, detecting the weight and the number of people on a scooter
+            before the ride begins is extremely important.
+            </p>
+        <span class="second-level-header">
+            What
+        </span>
+        <p>
+            I analyzed the data coming from a set of sensors installed on the scooters.
+            I built a time-series analysis pipeline and a 
+            model to learn passenger weights and whether two people were sharing a ride.            </p>
+        <span class="second-level-header">
+            How <br>
+        </span>
+        <p>
+            The project is implemented in pure Python. SKlearn has been used for the model 
+            and TSFresh for time-series windowing. 
+            Sensor signal analysis has been performed with Numpy and Scipy. 
+            </p>
+</div>
+<footer>
+    <a href="../../.." class="footer-navbar-logo">
+        <img src="../../../assets/portfolio_logo.svg">
+    </a>
+    <ul class="navbar-links">
+        <li class="footer-navbar-item red"> <a class="disable-jquery-coloring navbar-link" href="https://github.com/DPaletti"> github</a></li>
+        <li class="footer-navbar-item yellow"> <a class="disable-jquery-coloring navbar-link" href="https://www.linkedin.com/in/daniele-paletti/"> linkedin</a></li>
+        <li class="footer-navbar-item blue"> <a class="disable-jquery-coloring navbar-link" rel="me" href="https://social.coop/@dpaletti"> mastodon</a></li>
+        <li class="footer-navbar-item red"> <a class="disable-jquery-coloring navbar-link" href="https://codeberg.org/dpaletti"> codeberg</a></li>
+    </ul>
+</footer>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script>
+$('a').each(function(index){
+                if (!(location.hostname === this.hostname) && (this.hostname.length))
+                {
+                    $(this).attr("target", "_blank")
+                    $(this).attr("rel", "noreferrer nofollow noopener")
+                };
+
+                const colors = ["#dd0100ff", '#fac901ff', 'rgb(90, 143, 223)'];
+                const colorIndex = index % colors.length;
+                if (!$(this).hasClass("disable-jquery-coloring")) {
+                    $(this).hover(function() {$(this).css("color", colors[colorIndex])}, function() {$(this).css("color", "#313638")})
+                    $(this).attr("target", "_blank")
+                }
+              });
+
+    </script>
+</body>
+</html>

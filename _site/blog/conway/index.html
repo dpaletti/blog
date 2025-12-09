@@ -1,0 +1,25 @@
+<h1>Beyond Conway's law: bridging structure and function</h1>
+<p><br>
+Structure and function are tightly interwoven. Take a human arm, an extremely complex biological system that performs its functions through its structure; modifications to  its structure imply drastically different capabilities. Generally speaking, biological and artificial systems are always comprised of <strong>subsystems</strong> which we unveil from apparently unitary artifacts by slightly changing our viewpoint. The quest for <strong>linking structure and function</strong> becomes more intricate. We must abstract away the subsystems to find overarching patterns that help us examine broader system qualities.
+<br>
+ </p>
+<p>Throughout this article, I will examine organizations: <strong>systems designing other systems</strong>. What structural qualities are prevalent when predicting an organization’s function? That is, what structural qualities allow an organization to build effective systems?</p>
+<blockquote>
+<h1>conway’s law</h1>
+<p>Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization’s communication structure.
+<cite><a href="https://www.melconway.com/Home/pdf/committees.pdf">Mel Conway - How do Committees Invent?</a></cite></p>
+</blockquote>
+<p>Conway models an <strong>organization as a graph</strong>, with edges representing communication channels and vertices representing teams, where a team may also represent a single individual.
+In the original paper, <strong>system design</strong> is discussed as the intellectual activity which creates a useful whole from its diverse parts. A system always implies a factorization; a factorization implies an amalgamation. Both these processes happen at the two ends of the design process. If designing means identifying and solving subproblems then it also means merging subsolutions into the final artifact. Once we fix a design team, there is a <strong>class of design alternatives</strong> that cannot be effectively pursued by such an organization because the necessary <strong>communication paths</strong> do not exist. Organizing means biasing the design team towards a specific solution set.
+<br>
+ </p>
+<p>Conway makes this even clearer in <a href="https://melconway.com/Home/pdf/simplify.pdf">Toward Simplifying Application Development, in a Dozen Lessons</a> where he stresses that if you want the cleanest possible solution you have to find the simplest possible design before organizing to build, or else you have to be prepared to <strong>reorganize</strong>. Be prepared to scramble.
+<br>
+ </p>
+<p>The mapping between structure and function must be interpreted as bidirectional, <a href="https://en.wikipedia.org/wiki/Homomorphism">homomorphic</a>. Skelton and Pais (see <a href="https://res.infoq.com/articles/book-review-team-topologies/en/resources/TTOP_excerpt_InfoQ-1572531146315.pdf">Team Topology</a>) call Conway’s law a <strong>homomorphic force</strong>. Figure this rope connecting producer and product that keeps them tight by not stretching too far. Structural changes must happen on both sides, else they won’t happen even if we are induced to think otherwise.
+<br>
+ </p>
+<p>The homomorphic force keeps organization and design tight through time. When working on an existing (not necessarily legacy) system its structure reflects all the organization structure variations through time, that is every organization that altered the system in some way. Casey Muratori calls this phenomenon <a href="https://www.youtube.com/watch?v=5IUj1EZwpJY&amp;t=697s">Conway’s nightmare</a>: <strong>delegation traveling through time</strong>. Each subsystem is delegated to at least one team, and such delegations may change in the face of changing requirements or new available information. All pre-existing structures affect the current system and must be accounted for. It is as if the structure does not fit on a sheet of paper anymore (if it ever did) but travels in space. We now move from a simple organizational chart to a view of the <strong>evolution of the chart</strong> through time.
+<br>
+ </p>
+<p>Maintaining a system is frequently harder than building it, and that’s no news. However, by looking at a system through the spectacles of the organization’s communication structure through time we may be able to <strong>unveil crucial system aspects before delving into design specifics</strong> or implementation details.</p>

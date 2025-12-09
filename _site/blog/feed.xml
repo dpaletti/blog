@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <icon>/assets/favicon.ico</icon>
+  <title>Daniele Paletti - Blog</title>
+  <subtitle>Latest articles from the blog.</subtitle>
+  <link href="https://dpaletti.com/blog/blog/feed.xml" rel="self" />
+  <link href="https://dpaletti.com/blog" />
+  <updated>2025-02-25T00:00:00Z</updated>
+  <id>https://dpaletti.com/blog</id>
+  <author>
+    <name>Daniele Paletti</name>
+  </author>
+  <entry>
+    <title>Conway&#39;s law</title>
+    <link href="https://dpaletti.com/posts/conway/" />
+    <updated>2025-02-25T00:00:00Z</updated>
+    <id>https://dpaletti.com/posts/conway/</id>
+    <content type="html">&lt;h1&gt;Beyond Conway&#39;s law: bridging structure and function&lt;/h1&gt;
+&lt;p&gt;&lt;br&gt;
+Structure and function are tightly interwoven. Take a human arm, an extremely complex biological system that performs its functions through its structure; modifications to  its structure imply drastically different capabilities. Generally speaking, biological and artificial systems are always comprised of &lt;strong&gt;subsystems&lt;/strong&gt; which we unveil from apparently unitary artifacts by slightly changing our viewpoint. The quest for &lt;strong&gt;linking structure and function&lt;/strong&gt; becomes more intricate. We must abstract away the subsystems to find overarching patterns that help us examine broader system qualities.
+&lt;br&gt;
+ &lt;/p&gt;
+&lt;p&gt;Throughout this article, I will examine organizations: &lt;strong&gt;systems designing other systems&lt;/strong&gt;. What structural qualities are prevalent when predicting an organization’s function? That is, what structural qualities allow an organization to build effective systems?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h1&gt;conway’s law&lt;/h1&gt;
+&lt;p&gt;Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization’s communication structure.
+&lt;cite&gt;&lt;a href=&quot;https://www.melconway.com/Home/pdf/committees.pdf&quot;&gt;Mel Conway - How do Committees Invent?&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Conway models an &lt;strong&gt;organization as a graph&lt;/strong&gt;, with edges representing communication channels and vertices representing teams, where a team may also represent a single individual.
+In the original paper, &lt;strong&gt;system design&lt;/strong&gt; is discussed as the intellectual activity which creates a useful whole from its diverse parts. A system always implies a factorization; a factorization implies an amalgamation. Both these processes happen at the two ends of the design process. If designing means identifying and solving subproblems then it also means merging subsolutions into the final artifact. Once we fix a design team, there is a &lt;strong&gt;class of design alternatives&lt;/strong&gt; that cannot be effectively pursued by such an organization because the necessary &lt;strong&gt;communication paths&lt;/strong&gt; do not exist. Organizing means biasing the design team towards a specific solution set.
+&lt;br&gt;
+ &lt;/p&gt;
+&lt;p&gt;Conway makes this even clearer in &lt;a href=&quot;https://melconway.com/Home/pdf/simplify.pdf&quot;&gt;Toward Simplifying Application Development, in a Dozen Lessons&lt;/a&gt; where he stresses that if you want the cleanest possible solution you have to find the simplest possible design before organizing to build, or else you have to be prepared to &lt;strong&gt;reorganize&lt;/strong&gt;. Be prepared to scramble.
+&lt;br&gt;
+ &lt;/p&gt;
+&lt;p&gt;The mapping between structure and function must be interpreted as bidirectional, &lt;a href=&quot;https://en.wikipedia.org/wiki/Homomorphism&quot;&gt;homomorphic&lt;/a&gt;. Skelton and Pais (see &lt;a href=&quot;https://res.infoq.com/articles/book-review-team-topologies/en/resources/TTOP_excerpt_InfoQ-1572531146315.pdf&quot;&gt;Team Topology&lt;/a&gt;) call Conway’s law a &lt;strong&gt;homomorphic force&lt;/strong&gt;. Figure this rope connecting producer and product that keeps them tight by not stretching too far. Structural changes must happen on both sides, else they won’t happen even if we are induced to think otherwise.
+&lt;br&gt;
+ &lt;/p&gt;
+&lt;p&gt;The homomorphic force keeps organization and design tight through time. When working on an existing (not necessarily legacy) system its structure reflects all the organization structure variations through time, that is every organization that altered the system in some way. Casey Muratori calls this phenomenon &lt;a href=&quot;https://www.youtube.com/watch?v=5IUj1EZwpJY&amp;amp;t=697s&quot;&gt;Conway’s nightmare&lt;/a&gt;: &lt;strong&gt;delegation traveling through time&lt;/strong&gt;. Each subsystem is delegated to at least one team, and such delegations may change in the face of changing requirements or new available information. All pre-existing structures affect the current system and must be accounted for. It is as if the structure does not fit on a sheet of paper anymore (if it ever did) but travels in space. We now move from a simple organizational chart to a view of the &lt;strong&gt;evolution of the chart&lt;/strong&gt; through time.
+&lt;br&gt;
+ &lt;/p&gt;
+&lt;p&gt;Maintaining a system is frequently harder than building it, and that’s no news. However, by looking at a system through the spectacles of the organization’s communication structure through time we may be able to &lt;strong&gt;unveil crucial system aspects before delving into design specifics&lt;/strong&gt; or implementation details.&lt;/p&gt;
+</content>
+  </entry>
+</feed>
