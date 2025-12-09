@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Daniele Paletti - blog</title>
+  <subtitle>Latest articles.</subtitle>
+  <link href="https://dpaletti.com/feed.xml" rel="self" />
+  <link href="https://dpaletti.com/html/blog/" />
+  <updated>2025-12-09T10:25:53Z</updated>
+  <id>https://dpaletti.com/html/blog/</id>
+  <author>
+    <name>Daniele Paletti</name>
+  </author>
+</feed>
