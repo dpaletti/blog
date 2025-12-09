@@ -1,5 +1,5 @@
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
-const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
     // passthrough
@@ -17,25 +17,26 @@ module.exports = function (eleventyConfig) {
     // gh-pages needs prefix for working
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
-    // RSS feed
-    eleventyConfig.addPlugin(feedPlugin, {
-        type: "atom", // or "rss", "json"
-        outputPath: "/blog/feed.xml",
-        collection: {
-            name: "blog_post",
-            limit: 10, // 0 means no limit
-        },
-        metadata: {
-            language: "en",
-            title: "Daniele Paletti - blog",
-            subtitle: "Latest articles.",
-            base: "https://dpaletti.com/blog/",
-            author: {
-                name: "Daniele Paletti",
-                email: "",
-            },
-        },
-    });
+    //// RSS feed
+    //eleventyConfig.addPlugin(feedPlugin, {
+    //type: "atom", // or "rss", "json"
+    //outputPath: "/blog/feed.xml",
+    //collection: {
+    //name: "blog_post",
+    //limit: 10, // 0 means no limit
+    //},
+    //metadata: {
+    //language: "en",
+    //title: "Daniele Paletti - blog",
+    //subtitle: "Latest articles.",
+    //base: "https://dpaletti.com/blog/",
+    //author: {
+    //name: "Daniele Paletti",
+    //email: "",
+    //},
+    //},
+    //});
+    eleventyConfig.addPlugin(pluginRss);
 
     return {
         dir: {
