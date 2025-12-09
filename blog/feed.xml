@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-  <title>Daniele Paletti - blog</title>
-  <subtitle>Latest articles.</subtitle>
-  <link href="https://dpaletti.com/blog/feed.xml" rel="self" />
-  <link href="https://dpaletti.com/blog/" />
+  <icon>/assets/favicon.ico</icon>
+  <title>Daniele Paletti - Blog</title>
+  <subtitle>Latest articles from the blog.</subtitle>
+  <link href="https://dpaletti.com/blog/blog/feed.xml" rel="self" />
+  <link href="https://dpaletti.com/blog" />
   <updated>2025-02-25T00:00:00Z</updated>
-  <id>https://dpaletti.com/blog/</id>
+  <id>https://dpaletti.com/blog</id>
   <author>
     <name>Daniele Paletti</name>
   </author>
