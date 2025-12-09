@@ -20,7 +20,7 @@ module.exports = function (eleventyConfig) {
     // RSS feed
     eleventyConfig.addPlugin(feedPlugin, {
         type: "atom", // or "rss", "json"
-        outputPath: "/html/blog/feed.xml",
+        outputPath: "/blog/feed.xml",
         collection: {
             name: "blog_post",
             limit: 10, // 0 means no limit
