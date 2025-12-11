@@ -32,7 +32,7 @@ jobs:
         with:
           switches: -avzr --delete
           path: _site/
-          remote_path: ${{ secrets.VPS_SSH_BLOG_REMOTE_PATH }}
+          remote_path: ${{ secrets.VPS_BLOG_REMOTE_PATH }}
           remote_host: ${{ secrets.VPS_SSH_ADDRESS }}
           remote_port: 22
           remote_user: ${{ secrets.VPS_SSH_USER }}
