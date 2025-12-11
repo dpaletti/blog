@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="fediverse:creator" content="@dpaletti@social.coop">
+
+<head>
+    <link rel="stylesheet" href="../../../css/stylesheet.css">
+    <link rel="icon" type="image/x-icon" href="../../../assets/favicon.ico">
+    <title>PPO on Grid2OP - Daniele Paletti</title>
+</head>
+
+
+<body>
+
+    <header>
+        <a href="../../.." class="navbar-logo">
+            <img src="../../../assets/portfolio_logo.svg">
+        </a>
+        <ul class="navbar-links">
+            <li class="navbar-item yellow"> <a class="disable-jquery-coloring navbar-link" href="../../../blog/index.html"> blog</a></li>
+            <li class="navbar-item blue"> <a class="disable-jquery-coloring navbar-link" href="../../../projects/index.html"> projects</a></li>
+            <li class="navbar-item red"> <a class="disable-jquery-coloring navbar-link" href="../../../about/index.html"> about</a></li>
+        </ul>
+    </header>
+
+    
+
+<div class="left-aligned" style="margin-bottom: 5vh">
+  <span class="page-title"> (Multi-Agent)PPO on Grid2OP </span>
+  <div class="under-title viewport-margin">
+    <a
+      href="https://github.com/dpaletti/ppo-on-grid2op"
+      class="disable-jquery-coloring link blue"
+      style="font-size: calc(0.6vw + 0.8vh)"
+    >
+      github
+    </a>
+  </div>
+  <span class="second-level-header"> Why </span>
+  <p>
+    Power grid operation is an increasingly complex task due to the
+    unpredictability of sustainable energy sources (wind, solar, waves...).
+    Reinforcement learning algorithms can be beneficial in supporting operators
+    and avoid blackouts.
+  </p>
+  <span class="second-level-header"> What </span>
+  <p>
+    I have developed several variations of a PPO (proximal policy optimization)
+    algorithm on the Grid2OP platform. I re-ran the benchmarks provided by the
+    L2RPN (learning to run a power network) challenge and extended them with
+    different reward functions, graph-neural network based embeddings, and a
+    maskable action mechanism.
+  </p>
+  <span class="second-level-header"> How </span>
+  <p>
+    I have implemented the algorithms with PyTorch, Stable-Baselines,
+    PyTorch-Geometric, and the Grid2OP environment utilities. The training runs
+    have been monitored with Tensorboard. Finally, I have prepared the results
+    data with Polars and plotted the results with Plotly.
+  </p>
+</div>
+
+<footer>
+    <a href="../../.." class="footer-navbar-logo">
+        <img src="../../../assets/portfolio_logo.svg">
+    </a>
+    <ul class="navbar-links">
+        <li class="footer-navbar-item red"> <a class="disable-jquery-coloring navbar-link" href="https://github.com/DPaletti"> github</a></li>
+        <li class="footer-navbar-item yellow"> <a class="disable-jquery-coloring navbar-link" href="https://www.linkedin.com/in/daniele-paletti/"> linkedin</a></li>
+        <li class="footer-navbar-item blue"> <a class="disable-jquery-coloring navbar-link" rel="me" href="https://social.coop/@dpaletti"> mastodon</a></li>
+        <li class="footer-navbar-item red"> <a class="disable-jquery-coloring navbar-link" href="https://codeberg.org/dpaletti"> codeberg</a></li>
+    </ul>
+</footer>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script>
+$('a').each(function(index){
+                if (!(location.hostname === this.hostname) && (this.hostname.length))
+                {
+                    $(this).attr("target", "_blank")
+                    $(this).attr("rel", "noreferrer nofollow noopener")
+                };
+
+                const colors = ["#dd0100ff", '#fac901ff', 'rgb(90, 143, 223)'];
+                const colorIndex = index % colors.length;
+                if (!$(this).hasClass("disable-jquery-coloring")) {
+                    $(this).hover(function() {$(this).css("color", colors[colorIndex])}, function() {$(this).css("color", "#313638")})
+                    $(this).attr("target", "_blank")
+                }
+              });
+
+    </script>
+</body>
+</html>
