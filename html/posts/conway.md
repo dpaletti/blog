@@ -7,7 +7,7 @@ date: 2025-02-25
 # Beyond Conway's law: bridging structure and function
 
 \
-Looking at an orchestra it's easy to say it plays a symphony. Zooming in, it's even easier to say that the symphony is in the attenuation and amplification between instruments, sections and subsections of the orchestra. Biological and artificial systems are always comprised of **subsystems** which we unveil from apparently unitary artifacts by slightly changing our viewpoint. So, the quest for **linking structure and function** becomes: what can I know about the performance of an orchestra before it will actually start playing? We must abstract away the subsystems to find overarching patterns that help us examine broader system qualities.
+Listening to an orchestra it's easy to say it plays a symphony. Zooming in, it's even easier to say that the symphony stems from the attenuation and amplification between instruments, sections and subsections of the orchestra. Biological and artificial systems are always comprised of **subsystems** which we unveil from apparently unitary artifacts by slightly changing our viewpoint. So, the quest for **linking structure and function** becomes: what can I know about the performance of an orchestra before it will actually start playing? We must abstract away the subsystems to find overarching patterns that help us examine broader system qualities.
 \
 &nbsp;
 
