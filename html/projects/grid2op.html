@@ -1,0 +1,40 @@
+---
+title: PPO on Grid2OP - Daniele Paletti
+summary: PPO algorithms on Grid2OP
+date: 2025-12-01
+---
+
+<div class="left-aligned" style="margin-bottom: 5vh">
+  <span class="page-title"> (Multi-Agent)PPO on Grid2OP </span>
+  <div class="under-title viewport-margin">
+    <a
+      href="https://github.com/dpaletti/ppo-on-grid2op"
+      class="disable-jquery-coloring link blue"
+      style="font-size: calc(0.6vw + 0.8vh)"
+    >
+      github
+    </a>
+  </div>
+  <span class="second-level-header"> Why </span>
+  <p>
+    Power grid operation is an increasingly complex task due to the
+    unpredictability of sustainable energy sources (wind, solar, waves...).
+    Reinforcement learning algorithms can be beneficial in supporting operators
+    and avoid blackouts.
+  </p>
+  <span class="second-level-header"> What </span>
+  <p>
+    I have developed several variations of a PPO (proximal policy optimization)
+    algorithm on the Grid2OP platform. I re-ran the benchmarks provided by the
+    L2RPN (learning to run a power network) challenge and extended them with
+    different reward functions, graph-neural network based embeddings, and a
+    maskable action mechanism.
+  </p>
+  <span class="second-level-header"> How </span>
+  <p>
+    I have implemented the algorithms with PyTorch, Stable-Baselines,
+    PyTorch-Geometric, and the Grid2OP environment utilities. The training runs
+    have been monitored with Tensorboard. Finally, I have prepared the results
+    data with Polars and plotted the results with Plotly.
+  </p>
+</div>
