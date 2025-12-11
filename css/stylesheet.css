@@ -46,8 +46,15 @@ b {
 
 .rss-icon-link {
     display: flex;
+    color: currentColor;
     text-decoration: none;
-    color: inherit;
+    line-height: 0;
+}
+
+.rss-container {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
 }
 
 .boxed {
