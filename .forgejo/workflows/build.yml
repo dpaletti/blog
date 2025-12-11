@@ -27,7 +27,7 @@ jobs:
           npm ci
           npx @11ty/eleventy
 
-      - name: deploy to VPS
+      - name: Deploy to VPS
         uses: https://github.com/burnett01/rsync-deployments@v8
         with:
           switches: -avzr --delete
