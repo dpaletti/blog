@@ -2,6 +2,7 @@ const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const markdownItKatex = require("@vscode/markdown-it-katex").default;
 const markdownIt = require("markdown-it");
+const markdownItAttrs = require("markdown-it-attrs")
 
 module.exports = function (eleventyConfig) {
     // passthrough
@@ -12,7 +13,7 @@ module.exports = function (eleventyConfig) {
     const md = markdownIt({
         html: true,
         linkify: true,
-    }).use(markdownItKatex);
+    }).use(markdownItKatex).use(markdownItAttrs);
 
     eleventyConfig.setLibrary("md", md);
 

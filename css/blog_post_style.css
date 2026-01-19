@@ -1,119 +1,107 @@
+/* Note: Variables are inherited from stylesheet.css */
+
+.blog-post-content {
+    max-width: 80ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 h1 {
-    padding: calc(1vh + 3vw) var(--viewport-margin) 0 var(--viewport-margin);
-    font-size: calc(1.5vw + 2.5vh);
-    font-family: "Source Serif Pro", "serif";
+    font-family: var(--f-serif);
     font-weight: bold;
-    color: #313638;
+    color: var(--c-text);
+    font-size: var(--fs-xl);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+
 }
 
 h2 {
-    padding: calc(1vh + 3vw) var(--viewport-margin) 0 var(--viewport-margin);
-    font-size: calc(1.2vw + 2.1vh);
-    font-family: "Source Serif Pro", "serif";
+    font-family: var(--f-serif);
     font-weight: bold;
-    color: #313638;
+    color: var(--c-text);
+    font-size: 1.75rem;
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
 }
 
 h3 {
-    padding: calc(1vh + 3vw) var(--viewport-margin) 0 var(--viewport-margin);
-    font-size: calc(1vw + 1.5vh);
-    font-family: "Source Serif Pro", "serif";
+    font-family: var(--f-serif);
     font-weight: bold;
-    color: #313638;
+    color: var(--c-text);
+    font-size: var(--fs-md);
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
 }
 
 p {
-    max-width: 80vw;
-    font-family: "Fira Sans", "sans-serif";
-    font-weight: 350;
-    font-size: calc(1vw + 1.5vh);
-    color: #313638;
-    margin-left: var(--viewport-margin);
-    margin-right: var(--viewport-margin);
+    font-family: var(--f-sans);
+    font-weight: var(--fw-light);
+    font-size: var(--fs-base);
+    color: var(--c-text);
+    margin-bottom: var(--spacing-md);
+}
+
+img {
+    margin:auto
 }
 
 a {
     text-decoration: underline;
-    color: #313638;
+    color: var(--c-text);
 }
 
+blockquote {
+    margin: var(--spacing-lg) 0;
+    padding-left: var(--spacing-lg);
+    position: relative;
+}
+
+blockquote p {
+    font-size: var(--fs-base);
+    font-style: italic;
+}
+
+blockquote h1 {
+    font-variant: small-caps;
+    font-size: var(--fs-base);
+    margin-bottom: var(--spacing-sm);
+}
+
+blockquote cite a {
+    display: block;
+    font-style: normal;
+    font-size: var(--fs-sm);
+    margin-top: var(--spacing-sm);
+}
+
+/* --- Requested Unordered List Style --- */
+
 ul {
-    margin-left: var(--viewport-margin);
-    margin-right: var(--viewport-margin);
-    padding-left: 1.5rem; /* Ensures bullets don't hang outside the margin */
-    max-width: 80vw;
-    color: #313638;
+    color: var(--c-text);
+    /* Indent slightly from the left align of paragraphs */
+    margin: 0 0 var(--spacing-md) 1.5rem; 
+    padding: 0;
+    list-style-type: disc;
+}
+
+ul ul {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    margin-left: 1.5rem;
+    list-style-type: circle;
 }
 
 li {
-    font-family: "Fira Sans", "sans-serif";
-    font-weight: 350;
-    font-size: calc(1vw + 1.5vh);
-    line-height: 1.6; /* Improves readability for list items */
-    margin-bottom: 0.5rem; /* Adds slight breathing room between items */
+    font-family: var(--f-sans);
+    font-weight: var(--fw-light);
+    font-size: var(--fs-base);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem; /* Space between bullet and text */
 }
 
-/* Optional: Style for nested lists */
-ul ul {
-    margin-left: 1rem;
-    margin-top: 0.5rem;
-}
-Style a unordered list to be add to this css file:
-
-h1 {
-    padding: calc(1vh + 3vw) var(--viewport-margin) 0 var(--viewport-margin);
-
-    font-size: calc(1.5vw + 2.5vh);
-
-    font-family: "Source Serif Pro", "serif";
-
-    font-weight: bold;
-
-    color: #313638;
-}
-
-h2 {
-    padding: calc(1vh + 3vw) var(--viewport-margin) 0 var(--viewport-margin);
-
-    font-size: calc(1.2vw + 2.1vh);
-
-    font-family: "Source Serif Pro", "serif";
-
-    font-weight: bold;
-
-    color: #313638;
-}
-
-h3 {
-    padding: calc(1vh + 3vw) var(--viewport-margin) 0 var(--viewport-margin);
-
-    font-size: calc(1vw + 1.5vh);
-
-    font-family: "Source Serif Pro", "serif";
-
-    font-weight: bold;
-
-    color: #313638;
-}
-
-p {
-    max-width: 80vw;
-
-    font-family: "Fira Sans", "sans-serif";
-
-    font-weight: 350;
-
-    font-size: calc(1vw + 1.5vh);
-
-    color: #313638;
-
-    margin-left: var(--viewport-margin);
-
-    margin-right: var(--viewport-margin);
-}
-
-a {
-    text-decoration: underline;
-
-    color: #313638;
+li::marker {
+    color: var(--c-text); 
 }

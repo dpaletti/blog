@@ -44,7 +44,7 @@ Take a gas made of identical particles (a strong assumption, but bear with me), 
 
 Now **coarse-graining** enters the stage. If you think of the microstate visually, you can superimpose a grid on it. That is, if the microstate were for a second comprised only of particles’ positions, you could put a grid on it and count how many particles are in each square of the grid. Take a look at the image below. We have a box of particles; their position in the box is the microstate. We decide that we are interested in which particles are to the right and to the left of the middle of the box; this is our macrostate. The particles are all equal, so we are only interested in counting how many are on each side. The macrostate with 4 particles on one side and 4 particles on the other can be realized in several ways, depending on which particle is on which side. This would not change the macrostate we are in, but would change the microstate, that is, which specific particle is on which side.
 
-![[writing/micro_macro_entropy3.png]]
+![micro vs macro state](../../assets/posts/micro_macro-modified.png){width=70%, align="center"}
 
 It turns out that the **macrostate is a rough approximation of the microstate**. Temperature, volume, and in general macroscopic properties do not care (in this simplified equal particles assumption) which particle is in which square.
 
@@ -67,7 +67,7 @@ Here is where Boltzmann left off and Planck kept going. Boltzmann, throughout hi
 
 This approach was rather avant-garde and weakly received by contemporary scientists. However, Planck, while working on black-body radiation (the radiation responsible for the red color of hot bodies), needed a fundamental explanation for the equation he developed by fitting experimental data. And there he realized:
 
-> Entropy as a additive magnitude
+> # Entropy as a additive magnitude
 > Since the entropy is an additive magnitude but the probability W is a multiplicative one, I simply postulated that S = k log W where k is a universal constant.
 > <cite>[Max Planck (1901). On the Law of Distribution of Energy in the Normal Spectrum](https://web.archive.org/web/20140727104625/http://axion.physics.ubc.ca/200-06/Planck-1901.html)</cite>
 
@@ -91,7 +91,7 @@ Probabilities and information enter the picture. We now quantify entropy given h
 
 Entropy increase is now linked to uniformity:
 
-![[writing/entropy_arrangements.png]]
+![increasing entropy](../../assets/posts/entropy_increasing-modified.png)
 
 Here, the macrostate counts how many particles are on the right and how many on the left. In the low entropy case, there is just one compatible arrangement for a full count on the right, all particles on that side. In the second case, the number of possible arrangements compatible grows as the number of particles on the left grows because we can count the possible compatible arrangements as:
 
@@ -115,7 +115,8 @@ Boltzmann derived many formulations for entropy, following several different pat
 
 ## Gibbs (1902): Statistical Mechanics Redux
 
-$$S = -k \int_{X_\gamma} \rho(x_\gamma, t) \log [\rho(x_\gamma, t)] dx_\gamma$$  
+$$S = -k \int_{X_\gamma} \rho(x_\gamma, t) \log [\rho(x_\gamma, t)] dx_\gamma$$
+
 Here things start to get a bit notation heavy but conceptually we are not moving that far, I promise.
 Earlier we said **probability is the new language of entropy** but no probabilities were on sight, here probability densities $\rho$ take center stage.
 
@@ -158,7 +159,6 @@ $$P = (p(m_1), \dots, p(m_n)) \in X$$
 **Given some messages and their probability we can sum the log probabilities weighted by their probability and get a measure of the number of bits needed to communicate them over an information channel**. Take 2 fair coins, in this case with equal probability the outcome can be heads or tail so $- (0.5 \log(0.5) + 0.5 \log(0.5)) \cdot 2 = 2$ (with log in base 2). If the coins were weighted with heads coming 90% of the times we would have $-(0.9 \log(0.9) + 0.1 \log(0.1))\cdot 2 = 0.94$. Why does a uniformly distributed process takes more bits to be communicated? The intuition is that, a nonuniform coin always admits some tricks (compression we would say). In this case we use 1 bit to say whether both coins output was head, and this would happen very often 0.9\*0.9=0.81=81% of the times. In the other cases we would fallback to using two bits to encode the outcome of both coins. Being this a probabilistic measure we can go lower than 1 bit, in a real communication this is obviously not possible but an interesting theoretical result to create efficient compression strategies.
 
 If this is a measure of information content, why is this called entropy? Von Neumann is the culprit:
-
 > You should call it entropy, for two reasons. In the first place your uncertainty function has been used in statistical mechanics under that name, so it already has a name. In the second place, and more important, no one really knows what entropy really is, so in a debate you will always have the advantage.
 > <cite>John von Neumann</cite>
 
@@ -218,7 +218,7 @@ The measures $\mu$ we are talking about are normalized to sum to one so that we 
 To the cart again. Let’s add a sensor on top of the rail which triggers every time the cart passes in front of it with a speed lower than a given limit. The event $E$ is the sensor triggering. The region of the space $X$ is the subspace with the positions in front of the sensors joined with the admissible speeds. $\mu$ is the area of the rectangle built joining the two intervals, position along the rail and cart speed, and then divided (i.e. normalized) for the area of the rectangle made of total speed range and total rail length. So this is $\mu$, a probability in disguise but with a more flexible interpretation.
 
 Let’s focus on $\alpha$ now.
-$\alpha$ is a partition of our measure preserving system. A partition is some kind of subdivision of our phase space that covers the whole space and does not have any overlap (e.g. a grid superimposed on our space where the cells are not necessarily all equal). Sounds familiar? coarse-graining! But that’s not all, **$\alpha$ makes encoding explicit**.
+$\alpha$ is a partition of our measure preserving system. A partition is some kind of subdivision of our phase space that covers the whole space and does not have any overlap (e.g. a grid superimposed on our space where the cells are not necessarily all equal). Sounds familiar? coarse-graining! But that’s not all, $\alpha$ **makes encoding explicit**.
 
 As we have discussed earlier, in Shannon’s equation the number of bits takes into account the best encoding possible, like in the weighted coin case. When the distribution is not uniform there is always some clever encoding that allows me to reduce the number of bits with respect to the maximum I would need to communicate the uniform case. This kind of considerations become explicit through the encoding $\alpha$⁡. **We relate partitions and encodings through messages**. Every time the trajectory passes through the i-th ‘cell’ of the partition we save a message $m_i$ registering so to build a description of the trajectory not through the phase space but through the ‘partition-space’. Take the cart again (I promise it’s almost over), partitioning its phase space would equal to partitioning the rail in sections and creating speed intervals. We would produce a message $m_i$ every time the cart passes through a given rail section with a speed in a given speed interval.
 
@@ -236,7 +236,7 @@ Entropy is now alive. This result is relevant because we now talk about informat
 
 **A positive KS entropy is often linked to chaos**. Shannon information measures uncertainty and uncertainty is a form of unpredictability. A positive KS entropy means that the behaviour of the system is unpredictable. Disorder takes the stage again. I have been going on and on about disorder not being representative of any entropy definition and now a link to chaos.
 
-![Lorenz system sensitive dependence on initial conditions](https://www.johndcook.com/lorenz_xy.png)
+![Lorenz system sensitive dependence on initial conditions](../../assets/posts/lorenz-modified.png){width=70%}
 Does this seem disordered? I would not say so, maybe someone would. It is important to note that chaos can be summarized through Lorenz words as:
 
 > Lorenz's definition of chaos

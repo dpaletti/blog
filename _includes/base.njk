@@ -1,16 +1,51 @@
 ---
-layout: header.njk
+title: Daniele Paletti
+relative_path: ../..
 ---
 
-{{ content | safe }}
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="fediverse:creator" content="@dpaletti@social.coop">
+
+<head>
+    <link rel="stylesheet" href="{{ relative_path }}/css/stylesheet.css">
+    <link rel="icon" type="image/x-icon" href="{{ relative_path }}/assets/favicon.ico">
+    <link rel="stylesheet" href="{{ relative_path }}/css/katex.min.css">
+    <title>{{ title }}</title>
+</head>
+
+<header>
+    <a href="{{ relative_path }}" class="navbar-logo">
+        <img src="{{ relative_path }}/assets/portfolio_logo.svg">
+    </a>
+    <div class="navbar-links">
+        <div class="navbar-item yellow"> <a class="disable-jquery-coloring navbar-link" href="{{ relative_path }}/blog/index.html"> blog</a></div>
+        <div class="navbar-item blue"> <a class="disable-jquery-coloring navbar-link" href="{{ relative_path }}/projects/index.html"> projects</a></div>
+        <div class="navbar-item red"> <a class="disable-jquery-coloring navbar-link" href="{{ relative_path }}/about/index.html"> about</a></div>
+    </div>
+</header>
+
+
+<body>
+
+
+<div class="blog-post-content">
+    {{ content | safe }}
+</div>
+
 <footer>
     <a href="{{ relative_path }}" class="footer-navbar-logo">
         <img src="{{ relative_path }}/assets/portfolio_logo.svg">
     </a>
-    <ul class="navbar-links">
-        <li class="footer-navbar-item red"> <a class="disable-jquery-coloring navbar-link" href="https://github.com/DPaletti"> github</a></li>
-        <li class="footer-navbar-item yellow"> <a class="disable-jquery-coloring navbar-link" href="https://www.linkedin.com/in/daniele-paletti/"> linkedin</a></li>
-        <li class="footer-navbar-item blue"> <a class="disable-jquery-coloring navbar-link" rel="me" href="https://social.coop/@dpaletti"> mastodon</a></li>
-        <li class="footer-navbar-item red"> <a class="disable-jquery-coloring navbar-link" href="https://codeberg.org/dpaletti"> codeberg</a></li>
-    </ul>
+    <div class="navbar-links">
+        <div class="footer-navbar-item red"> <a class="disable-jquery-coloring navbar-link" href="https://github.com/DPaletti">github</a></div>
+        <div class="footer-navbar-item yellow"> <a class="disable-jquery-coloring navbar-link" href="https://www.linkedin.com/in/daniele-paletti/">linkedin</a></div>
+        <div class="footer-navbar-item blue"> <a class="disable-jquery-coloring navbar-link" rel="me" href="https://social.coop/@dpaletti">mastodon</a></div>
+        <div class="footer-navbar-item red"> <a class="disable-jquery-coloring navbar-link" href="https://codeberg.org/dpaletti">codeberg</a></div>
+    </div>
 </footer>
+
+
+</body>
+</html>
