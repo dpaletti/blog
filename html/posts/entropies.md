@@ -123,7 +123,7 @@ Earlier we said **probability is the new language of entropy** but no probabilit
 Gibbs set out to change the object of study of entropy from an individual system to an ensemble. Also said, we are moving from a theory of gases to a theory of systems. The ensemble is an uncountably infinite collection of independent systems that are all governed by the same equations but whose state at time $t$ differ.
 
 $X_\gamma$ is the $\gamma$-space of the ensemble, also called the phase-space or the space of all possible microstates of the system. $x_\gamma \in X_\gamma$ is the vector of positions and momenta of all the systems (e.g. particles), the **actual microstate** of the system. $\rho(x_\gamma, t)$ is a probability density (more on $\rho$ interpretation in a second) reflecting the probability at time $t$ of finding the state of one of the systems in region $R \subseteq X_\gamma$ so that we can define:
-$$p(R) = \int_R \rho(x_\gamma, t)dx_\gamma$$  
+$$p(R) = \int_R \rho(x_\gamma, t)dx_\gamma$$
 Then, Gibbs started analyzing to get extensivity when combining probabilities $\log⁡(P_1 \cdot P_2)=\log(P_1)+\log(P_2)$. In particular, he wanted to derive a property of the whole ensemble so he started studying the average value of over all systems. In general we can write an average as:
 $$\int_{\text{all space}} f(x) \rho(x)dx$$
 If we take $f(\cdot) = \eta(\cdot) = \log(\rho(\cdot))$ then we define the average value of $\eta$ over the entire phase space, that is over the combination of all possible states of all systems as:
