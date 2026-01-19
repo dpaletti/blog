@@ -22,7 +22,8 @@
     --fs-base: 1rem;
     --fs-md: 1.25rem;
     --fs-lg: 1.5rem;
-    --fs-xl: 2.25rem;
+    --fs-x: 2rem;
+    --fs-xl: 3rem;
 
     /* --- Spacing & Layout --- */
     --gutter: clamp(1rem, 5vw, 4rem); 
@@ -117,7 +118,7 @@ header {
 
 .page-title {
     margin-top: var(--spacing-xl);
-    font-size: var(--fs-xl);
+    font-size: var(--fs-x);
     font-family: var(--f-serif);
     font-weight: bold;
 }
@@ -132,7 +133,6 @@ header {
 .summary {
     font-size: var(--fs-xl);
     padding-top: var(--spacing-xl);
-    line-height: 1.2;
 }
 
 .boxed {
@@ -167,7 +167,7 @@ header {
     outline: var(--border-width) solid var(--c-text);
     margin-bottom: var(--border-width);
     padding: var(--spacing-md);
-    font-size: var(--fs-base);
+    font-size: var(--fs-md);
     gap: var(--spacing-md);
 }
 

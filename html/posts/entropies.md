@@ -21,7 +21,7 @@ The cyclic integral has another important implication: **entropy in reversible p
 
 The realization that for every transformation we have an increase in entropy due to some non-idealities that lose some energy is very clear in Planck’s statement of the second law of thermodynamics:
 
-> # Planck's second law of thermodynamics
+> # planck's second law of thermodynamics
 >
 > Every process occurring in nature proceeds in the sense in which the sum of the entropies of all bodies taking part in the process is increased. In the limit, i.e. for reversible processes, the sum of the entropies remains unchanged.
 > <cite> [Roberts, J.K., Miller, A.R. (1960). Heat and Thermodynamics](https://archive.org/details/heatthermodynami0000robe/page/n1/mode/2up)</cite>
@@ -59,7 +59,7 @@ $W$ is **the number of arrangements compatible with a given distribution** $D$.
 
 Here is where Boltzmann left off and Planck kept going. Boltzmann, throughout his career focused on bridging thermodynamics and probability theory because, as he states:
 
-> # From thermodynamics to probability theory
+> # from thermodynamics to probability theory
 >
 > For the molecules of the body are indeed so numerous, and their motion is so rapid, that we can perceive nothing more than average values. Hence, the problems of the mechanical theory of heat are also problems of probability theory.
 > <cite>[Ludwig Boltzmann (1872). Further Studies on the Thermal Equilibrium
@@ -67,7 +67,7 @@ Here is where Boltzmann left off and Planck kept going. Boltzmann, throughout hi
 
 This approach was rather avant-garde and weakly received by contemporary scientists. However, Planck, while working on black-body radiation (the radiation responsible for the red color of hot bodies), needed a fundamental explanation for the equation he developed by fitting experimental data. And there he realized:
 
-> # Entropy as a additive magnitude
+> # entropy as a additive magnitude
 > Since the entropy is an additive magnitude but the probability W is a multiplicative one, I simply postulated that S = k log W where k is a universal constant.
 > <cite>[Max Planck (1901). On the Law of Distribution of Energy in the Normal Spectrum](https://web.archive.org/web/20140727104625/http://axion.physics.ubc.ca/200-06/Planck-1901.html)</cite>
 
@@ -159,8 +159,10 @@ $$P = (p(m_1), \dots, p(m_n)) \in X$$
 **Given some messages and their probability we can sum the log probabilities weighted by their probability and get a measure of the number of bits needed to communicate them over an information channel**. Take 2 fair coins, in this case with equal probability the outcome can be heads or tail so $- (0.5 \log(0.5) + 0.5 \log(0.5)) \cdot 2 = 2$ (with log in base 2). If the coins were weighted with heads coming 90% of the times we would have $-(0.9 \log(0.9) + 0.1 \log(0.1))\cdot 2 = 0.94$. Why does a uniformly distributed process takes more bits to be communicated? The intuition is that, a nonuniform coin always admits some tricks (compression we would say). In this case we use 1 bit to say whether both coins output was head, and this would happen very often 0.9\*0.9=0.81=81% of the times. In the other cases we would fallback to using two bits to encode the outcome of both coins. Being this a probabilistic measure we can go lower than 1 bit, in a real communication this is obviously not possible but an interesting theoretical result to create efficient compression strategies.
 
 If this is a measure of information content, why is this called entropy? Von Neumann is the culprit:
+
+> # von neumann - shannon correspondence
 > You should call it entropy, for two reasons. In the first place your uncertainty function has been used in statistical mechanics under that name, so it already has a name. In the second place, and more important, no one really knows what entropy really is, so in a debate you will always have the advantage.
-> <cite>John von Neumann</cite>
+> <cite>[McIrvine, Edward C. and Tribus, Myron (1971). Energy and Information Scientific American 225](https://www.esalq.usp.br/lepse/imgs/conteudo_thumb/Energy-and-Information.pdf)</cite>
 
 Von Neumann, who at the time was working on entropy himself, observed that Shannon’s formulation is very similar to already existing formulations in statistical mechanics. Discrete versions of Gibbs entropy and probabilistic versions of Boltzmann entropy had already been discussed in statistical mechanics by 1948.
 
@@ -239,7 +241,7 @@ Entropy is now alive. This result is relevant because we now talk about informat
 ![Lorenz system sensitive dependence on initial conditions](../../assets/posts/lorenz-modified.png){width=70%}
 Does this seem disordered? I would not say so, maybe someone would. It is important to note that chaos can be summarized through Lorenz words as:
 
-> Lorenz's definition of chaos
+> # lorenz's definition of chaos
 > When the present determines the future but the approximate present does not approximately determine the future.
 > <cite> [Danforth, Christopher M. (2013). Chaos in an Atmosphere Hanging on a Wall](http://mpe.dimacs.rutgers.edu/2013/03/17/chaos-in-an-atmosphere-hanging-on-a-wall/)</cite>
 
