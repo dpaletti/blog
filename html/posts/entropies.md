@@ -1,16 +1,27 @@
 ---
 title: Entropies
-summary: "What's a working definition of entropy?"
+summary: "Towards a working definition of entropy"
 date: 2025-02-25
 ---
 
-# Entropies
+# Towards a working definition of entropy
 
 What’s entropy? Or better, what’s a working definition of entropy we can use to understand the term when it is used across multiple contexts?
 
-The complexity stems from the vast number of definitions given formally and informally through time. We will start with the first definition and work our way through some of the more modern ones (in chronological order) to get a sense of what we mean and what we definitely should not mean when talking about entropy.
+The complexity stems from the vast number of definitions given formally and informally through time. We will start with the first definition and work our way through some of the more modern ones to get a sense of what we mean and what we definitely should not mean when talking about entropy.
 
-## Clausius (1854): Classical Thermodynamics
+<nav class="toc">
+    <ul>
+        <li><a href="#clausius">Clausius (1854): Classical Thermodynamics</a></li>
+        <li><a href="#boltzmann">Boltzmann and Planck (1877–1901): Statistical Mechanics</a></li>
+        <li><a href="#gibbs">Gibbs (1902): Statistical Mechanics Redux</a></li>
+        <li><a href="#shannon">Shannon (1948): Information Theory</a></li>
+        <li><a href="#renyi">Rényi Entropy (1961): Generalizing Information Measures</a></li>
+        <li><a href="#kolmogorov">Kolmogorov–Sinai (1958): Dynamical Systems Theory</a></li>
+    </ul>
+</nav>
+
+## Clausius (1854): Classical Thermodynamics {#clausius}
 
 $$- \oint S_\text{env} = \oint \frac{\delta Q}{T_\text{env}} \leq 0$$
 This is it, the first definition from thermodynamics (wanted to fit all in one equation, so I also added the Clausius inequality). Given some amount of heat $\delta Q$ leaving the environment sitting at $T_\text{env}$ and absorbed by a system, the cyclic integral must be less than or equal to 0. Now the question becomes, what’s a cyclic integral? The intuition is fairly simple: when equality holds, it means that the quantity $\frac{\delta Q}{T}$ absorbed by the system is equally compensated by the amount emitted from the environment. Also, if equality holds, I am moving all the heat (energy as heat) from the environment to the system without losing anything and creating a so-called reversible transformation. We call it reversible because **this integral is telling me that I can go back and forth exchanging heat all I want, and I won’t ever lose anything. This is, of course, impossible.**
@@ -19,18 +30,16 @@ Real transformations are irreversible, and this is what that inequality is sayin
 
 The cyclic integral has another important implication: **entropy in reversible processes is a state function**. When we can show that a quantity does not change through a cyclic integral (equality holds), this means that taken two points $A$ and $B$ entropy can be quantified by looking only at the origin and destination state without taking into account the path from one to the other. This is important because **entropy can be used to qualify transformations from a higher level of abstraction**, disregarding how the transformation happened. On top of this, entropy can be easily computed for non-cyclic processes. Take a real transformation from $A$ to $B$ once we get to $B$ we have an irreversible transformation, but we also know that the entropy of a reversible transformation is 0. So, to compute the entropy of the real transformation from $A$ to $B$ it is sufficient to connect $B$ to $A$ with a reversible transformation which won’t affect our computation of the real entropy of the process. This way, we characterize the entropy of a transformation and not necessarily a cycle.
 
-The realization that for every transformation we have an increase in entropy due to some non-idealities that lose some energy is very clear in Planck’s statement of the second law of thermodynamics:
+The realization that for every transformation we have an increase in entropy due to some non-idealities that lose some energy is very clear in **Planck’s statement of the second law of thermodynamics**:
 
-> # planck's second law of thermodynamics
->
 > Every process occurring in nature proceeds in the sense in which the sum of the entropies of all bodies taking part in the process is increased. In the limit, i.e. for reversible processes, the sum of the entropies remains unchanged.
-> <cite> [Roberts, J.K., Miller, A.R. (1960). Heat and Thermodynamics](https://archive.org/details/heatthermodynami0000robe/page/n1/mode/2up)</cite>
+> <cite> [Planck (1903). Treatise on thermodynamics](https://archive.org/details/treatiseonthermo00planrich)</cite>
 
 It is a complete equilibrium that guarantees fixed entropy; every time something changes I lose some energy in the process. This kind of statement may start to clarify why there exists **a link between entropy and time**. I know only a quantity that is guaranteed not to decrease with time; time itself. However, we have just established that entropy is another of such quantities, so we can say that both travel in the same direction, entropy points (like an arrow) in the same direction of time.
 
 As we have seen, **entropy is neither disorder nor any other exotic concept (for now)**. In classical thermodynamics, entropy is “only” a way to quantify the amount of energy (as heat) we lose when we move it somewhere else.
 
-## Boltzmann and Planck (1877 - 1901): statistical mechanics
+## Boltzmann and Planck (1877 - 1901): statistical mechanics {#boltzmann}
 
 $$S = k \log W$$
 
@@ -57,17 +66,14 @@ $$W = G(D) = \frac{n!}{n_1! \dots n_l!}$$
 
 $W$ is **the number of arrangements compatible with a given distribution** $D$.
 
-Here is where Boltzmann left off and Planck kept going. Boltzmann, throughout his career focused on bridging thermodynamics and probability theory because, as he states:
+Here is where Boltzmann left off and Planck kept going. Boltzmann, throughout his career focused on **bridging thermodynamics and probability theory** because, as he states:
 
-> # from thermodynamics to probability theory
->
 > For the molecules of the body are indeed so numerous, and their motion is so rapid, that we can perceive nothing more than average values. Hence, the problems of the mechanical theory of heat are also problems of probability theory.
 > <cite>[Ludwig Boltzmann (1872). Further Studies on the Thermal Equilibrium
 > of Gas Molecules](https://gilles.montambaux.com/files/histoire-physique/Boltzmann-1872-anglais.pdf)</cite>
 
 This approach was rather avant-garde and weakly received by contemporary scientists. However, Planck, while working on black-body radiation (the radiation responsible for the red color of hot bodies), needed a fundamental explanation for the equation he developed by fitting experimental data. And there he realized:
 
-> # entropy as a additive magnitude
 > Since the entropy is an additive magnitude but the probability W is a multiplicative one, I simply postulated that S = k log W where k is a universal constant.
 > <cite>[Max Planck (1901). On the Law of Distribution of Energy in the Normal Spectrum](https://web.archive.org/web/20140727104625/http://axion.physics.ubc.ca/200-06/Planck-1901.html)</cite>
 
@@ -113,7 +119,7 @@ The entropy picture changed drastically, broadening the applicability of the con
 
 Boltzmann derived many formulations for entropy, following several different paths. Here we summarized the most famous one. Throughout this article, we always take into account entropy formulations that have the highest chance of being mentioned in the general discourse.
 
-## Gibbs (1902): Statistical Mechanics Redux
+## Gibbs (1902): Statistical Mechanics Redux {#gibbs}
 
 $$S = -k \int_{X_\gamma} \rho(x_\gamma, t) \log [\rho(x_\gamma, t)] dx_\gamma$$
 
@@ -145,7 +151,7 @@ We have now definitely moved to **the world of probabilities**. Jaynes’s inter
 
 We have talked so much about knowledge that is now time to focus on information.
 
-## Shannon (1948): information theory
+## Shannon (1948): information theory {#shannon}
 
 $$S = - \sum_{x \in X} p(x) \log p(x)$$
 Ok, this is surprisingly similar to Gibbs’. We move from densities to discrete probabilities but this is to be expected when moving from the continuous to the discrete. This looks very much like a discretization of the previous one without the Boltzmann constant. So, what’s the role of this definition almost 50 years after the ones from Gibbs and Planck? Formalizing a theory of communication for noisy channels and compression.
@@ -160,7 +166,6 @@ $$P = (p(m_1), \dots, p(m_n)) \in X$$
 
 If this is a measure of information content, why is this called entropy? Von Neumann is the culprit:
 
-> # von neumann - shannon correspondence
 > You should call it entropy, for two reasons. In the first place your uncertainty function has been used in statistical mechanics under that name, so it already has a name. In the second place, and more important, no one really knows what entropy really is, so in a debate you will always have the advantage.
 > <cite>[McIrvine, Edward C. and Tribus, Myron (1971). Energy and Information Scientific American 225](https://www.esalq.usp.br/lepse/imgs/conteudo_thumb/Energy-and-Information.pdf)</cite>
 
@@ -172,7 +177,6 @@ Tables have turned again, **entropy can now be used to characterize any (discret
 
 The real revolution of Shannon formulation is **linking thermodynamics and information**. This led Jaynes (1957) to reconceptualize statistical mechanics through the lens of information theory. His work culminated in the **maximum entropy principle**:
 
-> Maximum entropy principle
 > the probability distribution which best represents the current state of knowledge about a system is the one with largest entropy, in the context of precisely stated prior data
 > <cite>[E.T. Jaynes (1957). Information Theory and Statistical Mechanics](https://bayes.wustl.edu/etj/articles/theory.1.pdf)</cite>
 
@@ -182,7 +186,7 @@ After Shannon’s work we are able to apply entropy to almost any process. The i
 
 Information theory is a very generally applicable field and so Shannon’s definition not only built a bridge to statistical mechanics but it also gave rise to many new entropy definitions which can be to different degrees matched to Shannon’s.
 
-## Renyi Entropy (1961): Generalizing Information Measures
+## Renyi Entropy (1961): Generalizing Information Measures {#renyi}
 
 $$S_\alpha := \frac{1}{1-\alpha}\log(\sum_{i=1}^n p_i^\alpha)$$
 We are not moving that far from the previous definition (yet). **Renyi set out to generalize Shannon’s definition keeping entropy additive for independent event** (hence the logarithm).
@@ -201,7 +205,7 @@ This entropy has numerous application in all those cases in which we need a stro
 
 Obviously, Renyi entropy can also be employed at different $\alpha$ levels than the ones I showed here. The idea stays the same, take Shannon’s definition and bend it to accomodate different use cases.
 
-## Kolmogorov-Sinai (1958): Dynamical Systems Theory
+## Kolmogorov-Sinai (1958): Dynamical Systems Theory {#kolmogorov}
 
 $$S := \sup_\alpha\{\lim_{n \rightarrow \infty}H_n(\alpha, T)\}$$
 
@@ -239,11 +243,10 @@ Entropy is now alive. This result is relevant because we now talk about informat
 **A positive KS entropy is often linked to chaos**. Shannon information measures uncertainty and uncertainty is a form of unpredictability. A positive KS entropy means that the behaviour of the system is unpredictable. Disorder takes the stage again. I have been going on and on about disorder not being representative of any entropy definition and now a link to chaos.
 
 ![Lorenz system sensitive dependence on initial conditions](../../assets/posts/lorenz-modified.png){width=70%}
-Does this seem disordered? I would not say so, maybe someone would. It is important to note that chaos can be summarized through Lorenz words as:
+Does this seem disordered? I would not say so, maybe someone would. It is important to note that **chaos can be summarized through Lorenz words** as:
 
-> # lorenz's definition of chaos
 > When the present determines the future but the approximate present does not approximately determine the future.
-> <cite> [Danforth, Christopher M. (2013). Chaos in an Atmosphere Hanging on a Wall](http://mpe.dimacs.rutgers.edu/2013/03/17/chaos-in-an-atmosphere-hanging-on-a-wall/)</cite>
+> <cite> [Lorenz, The Essence of Chaos (1993)](https://eclass.uoa.gr/modules/document/file.php/PHYS289/%CE%92%CE%B9%CE%B2%CE%BB%CE%AF%CE%B1/Edward%20N.%20Lorenz%20-%20The%20Essence%20of%20Chaos-CRC%20%282005%29.pdf)</cite>
 
 Which is not necessarily a definition of disorder.
 

@@ -1,20 +1,59 @@
 /* Note: Variables are inherited from stylesheet.css */
 
+.toc {
+    font-size: var(--fs-md);
+    margin: var(--spacing-xl) 0;
+    padding-left: var(--spacing-lg);
+    border-left: var(--border-width) solid var(--c-text);
+    color: var(--c-text-muted);
+}
+
+.toc::before {
+    content: "Contents";
+    display: block;
+    font-family: var(--f-serif);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-md);
+    margin-bottom: var(--spacing-sm);
+    color: var(--c-text);
+}
+.toc a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 0.05em solid transparent;
+}
+
+.toc a:hover {
+    border-bottom-color: var(--c-text);
+}
+
+.toc ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.toc li {
+    font-family: var(--f-sans);
+    font-size: var(--fs-base);
+    line-height: 1.6;
+    margin-bottom: 0.4rem;
+    padding-left: 0;
+}
+
 .blog-post-content {
     max-width: 80ch;
     margin-left: auto;
     margin-right: auto;
 }
 
-
 h1 {
     font-family: var(--f-serif);
     font-weight: bold;
     color: var(--c-text);
-    font-size: var(--fs-xl);
+    font-size: var(--fs-lg);
     margin-top: var(--spacing-lg);
     margin-bottom: var(--spacing-sm);
-
 }
 
 h2 {
@@ -44,7 +83,12 @@ p {
 }
 
 img {
-    margin:auto
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p img {
+    padding: var(--spacing-xl) 0;
 }
 
 a {
@@ -56,11 +100,11 @@ blockquote {
     margin: var(--spacing-lg) 0;
     padding-left: var(--spacing-lg);
     position: relative;
+    border-left: var(--border-width) solid var(--c-text);
 }
 
 blockquote p {
     font-size: var(--fs-base);
-    font-style: italic;
 }
 
 blockquote h1 {
@@ -81,7 +125,7 @@ blockquote cite a {
 ul {
     color: var(--c-text);
     /* Indent slightly from the left align of paragraphs */
-    margin: 0 0 var(--spacing-md) 1.5rem; 
+    margin: 0 0 var(--spacing-md) 1.5rem;
     padding: 0;
     list-style-type: disc;
 }
@@ -103,5 +147,5 @@ li {
 }
 
 li::marker {
-    color: var(--c-text); 
+    color: var(--c-text);
 }
