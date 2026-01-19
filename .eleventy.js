@@ -1,11 +1,20 @@
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const markdownItKatex = require("@vscode/markdown-it-katex").default;
+const markdownIt = require("markdown-it");
 
 module.exports = function (eleventyConfig) {
     // passthrough
     eleventyConfig.addPassthroughCopy("css");
     eleventyConfig.addPassthroughCopy("assets");
     eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
+
+    const md = markdownIt({
+        html: true,
+        linkify: true,
+    }).use(markdownItKatex);
+
+    eleventyConfig.setLibrary("md", md);
 
     // format date to YYYY-mm-dd
     eleventyConfig.addFilter("YearMonthDay", (dateString) => {
@@ -17,25 +26,6 @@ module.exports = function (eleventyConfig) {
     // gh-pages needs prefix for working
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
-    //// RSS feed
-    //eleventyConfig.addPlugin(feedPlugin, {
-    //type: "atom", // or "rss", "json"
-    //outputPath: "/blog/feed.xml",
-    //collection: {
-    //name: "blog_post",
-    //limit: 10, // 0 means no limit
-    //},
-    //metadata: {
-    //language: "en",
-    //title: "Daniele Paletti - blog",
-    //subtitle: "Latest articles.",
-    //base: "https://dpaletti.com/blog/",
-    //author: {
-    //name: "Daniele Paletti",
-    //email: "",
-    //},
-    //},
-    //});
     eleventyConfig.addPlugin(pluginRss);
 
     return {

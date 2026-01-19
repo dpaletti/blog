@@ -7,6 +7,7 @@
 <head>
     <link rel="stylesheet" href="../../css/stylesheet.css">
     <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../css/katex.min.css">
     <title>Blog - Daniele Paletti</title>
 </head>
 
@@ -38,8 +39,24 @@
 <div class="scrollable-container">
 
 
-    <a href=/posts/conway/ class="disable-jquery-coloring">
+    <a href=/posts/entropies/ class="disable-jquery-coloring">
         <div class="cell-container yellow">
+            <div class="cell-content-container">
+            <div class="blog-cell-container">
+            <div>
+            What's a working definition of entropy?
+            </div>
+            <div class="entry-date">
+                Last updated 2025-02-25
+            </div>
+            </div>
+            </div>
+            <div class="arrow right"></div>
+        </div>
+    </a>
+
+    <a href=/posts/conway/ class="disable-jquery-coloring">
+        <div class="cell-container red">
             <div class="cell-content-container">
             <div class="blog-cell-container">
             <div>
@@ -69,24 +86,5 @@
 </footer>
 
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <script>
-$('a').each(function(index){
-                if (!(location.hostname === this.hostname) && (this.hostname.length))
-                {
-                    $(this).attr("target", "_blank")
-                    $(this).attr("rel", "noreferrer nofollow noopener")
-                };
-
-                const colors = ["#dd0100ff", '#fac901ff', 'rgb(90, 143, 223)'];
-                const colorIndex = index % colors.length;
-                if (!$(this).hasClass("disable-jquery-coloring")) {
-                    $(this).hover(function() {$(this).css("color", colors[colorIndex])}, function() {$(this).css("color", "#313638")})
-                    $(this).attr("target", "_blank")
-                }
-              });
-
-    </script>
 </body>
 </html>
