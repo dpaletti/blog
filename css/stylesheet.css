@@ -49,6 +49,11 @@ html {
     box-sizing: inherit;
 }
 
+p, h1, h2, .summary {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
 body {
     color: var(--c-text);
     background-color: var(--c-bg);
@@ -58,7 +63,12 @@ body {
     font-family: var(--f-sans);
     font-weight: var(--fw-light);
     line-height: 1.5;
+<<<<<<< HEAD
 
+=======
+    
+    box-sizing: border-box;
+>>>>>>> 5b34b2b (fixed mobile behaviour)
     padding: 0 var(--gutter);
     margin: 0;
     max-width: 70rem;
@@ -314,11 +324,56 @@ footer {
         flex-direction: column;
     }
 
+<<<<<<< HEAD
     .system-arch,
+=======
+    .beside > * {
+        width: 100% !important;
+        max-width: 100%;
+    }
+    
+    .system-arch, 
+>>>>>>> 5b34b2b (fixed mobile behaviour)
     .img-container,
     .about-text {
         width: 100%;
         max-width: none;
+    }
+    .home-page .summary {
+        display: none;
+    }
+    .home-page header {
+        flex-direction: column;
+        justify-content: center; /* Vertical center */
+        align-items: center;     /* Horizontal center */
+/* Use 100dvh (dynamic viewport height) to better handle mobile bars */
+        padding: var(--spacing-md) 0;
+        min-height: 80dvh;
+        margin-top: 0;
+        gap: var(--spacing-xl);  /* Space between logo and boxes */
+    }
+    /* 3. Stack the navigation boxes vertically */
+    .home-page .navbar-links {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: var(--spacing-sm);
+    }
+
+    /* 4. Make the buttons a uniform, tappable size */
+    .home-page .navbar-item {
+        width: 100%;
+        max-width: 280px; /* Prevents boxes from being too wide on tablets */
+        text-align: center;
+    }
+
+    .home-page .navbar-link {
+        padding: 1rem; /* Larger touch target for mobile fingers */
+    }
+
+    /* 5. Adjust logo size for the center stage */
+    .home-page .navbar-logo {
+        display: none
     }
 }
 

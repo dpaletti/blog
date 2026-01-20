@@ -47,6 +47,15 @@
     margin-right: auto;
 }
 
+<<<<<<< HEAD
+=======
+p, h1, h2, .summary {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+
+>>>>>>> 5b34b2b (fixed mobile behaviour)
 h1 {
     font-family: var(--f-serif);
     font-weight: bold;
