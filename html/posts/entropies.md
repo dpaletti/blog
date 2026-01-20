@@ -89,7 +89,7 @@ $$pV = nRT$$
 
 The product of pressure $p$ and volume $V$ is proportional to the product of amount of substance $n$ and absolute temperature $T$ through the constant $R$. $N_a$ is the **Avogadro constant** that represents the ratio between the amount of substance and the number of particles that it contains. So $k$ was constructed as the **proportionality factor that relates thermal energy of particles in a gas with the temperature of such gas**.
 
-Summing up, Boltzmann, and Planck wrote a definition of entropy that is a measure of how much we can infer about the arrangement of a system on the basis of its distribution. The original definition of entropy can be derived from this one, assuming an ideal gas (non-interacting particles).
+Summing up, Boltzmann and Planck wrote a definition of entropy that is a measure of how much we can infer about the arrangement of a system on the basis of its distribution. The original definition of entropy can be derived from this one, assuming an ideal gas (non-interacting particles).
 
 The leap from the first definition of entropy is abysmal.
 
@@ -103,7 +103,7 @@ Here, the macrostate counts how many particles are on the right and how many on 
 
 $$W = \frac{n_\text{particles}}{n_\text{right}!n_\text{left}!}$$
 
-Finally, this count has its maximum when $n_\text{right} = n_\text{left}$. Now, one very important consideration. Some say that in this picture disorder grows from right to left for me it’s not that true, I would rather say that the middle picture appears more disordered. Disorder is not really a formally defined term but rather a personal perception on the state of things, **using disorder when talking about entropy can be highly misleading**. In this case, and that’s the norm, we can clearly see that the last state reached is an equilibrium one in which the entropy is maximized and nothing more can happen.
+Finally, this count has its maximum when $n_\text{right} = n_\text{left}$. Now, one very important consideration. Some say that in this picture disorder grows from right to left. It does not seem so obvious to me. I would rather say that the middle picture appears more disordered. Disorder is not really a formally defined term but rather a personal perception on the state of things, **using disorder when talking about entropy can be highly misleading**. In this case, and that’s the norm, we can clearly see that the last state reached is an equilibrium one in which the entropy is maximized and nothing more can happen.
 
 So **entropy has a maximum**? Maybe, from this construction, it seems rather obvious that as thermodynamic processes march along, they tend to move towards the microstate that maximizes the number of arrangements with respect to the macrostate. This tendency is simply derived from the fact that these microstates outnumber  all the others and so assuming random movement, there will be convergence there sooner or later. Extending this idea to the whole universe we introduce **Heat death**. This hypothesis states that the universe will reach maximum entropy, and a state of complete equilibrium will cease all thermodynamic processes.
 
