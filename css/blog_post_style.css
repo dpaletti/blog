@@ -100,6 +100,7 @@ blockquote {
     padding-left: var(--spacing-lg);
     position: relative;
     border-left: var(--border-width) solid var(--c-text);
+    line-height: 1.5;
 }
 
 blockquote p {
