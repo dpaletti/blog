@@ -344,7 +344,7 @@ footer {
 
 /* --- Media Queries --- */
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     :root {
         --gutter: clamp(1.5rem, 4vw, 2rem);
     }
