@@ -53,7 +53,7 @@ Take a gas made of identical particles (a strong assumption, but bear with me), 
 
 Now **coarse-graining** enters the stage. If you think of the microstate visually, you can superimpose a grid on it. That is, if the microstate were for a second comprised only of particles’ positions, you could put a grid on it and count how many particles are in each square of the grid. Take a look at the image below. We have a box of particles; their position in the box is the microstate. We decide that we are interested in which particles are to the right and to the left of the middle of the box; this is our macrostate. The particles are all equal, so we are only interested in counting how many are on each side. The macrostate with 4 particles on one side and 4 particles on the other can be realized in several ways, depending on which particle is on which side. This would not change the macrostate we are in, but would change the microstate, that is, which specific particle is on which side.
 
-![micro vs macro state](../../assets/posts/micro_macro-modified.png){width=70%, align="center"}
+![micro vs macro state](../../assets/posts/micro_macro-modified.png){width=90%, align="center"}
 
 It turns out that the **macrostate is a rough approximation of the microstate**. Temperature, volume, and in general macroscopic properties do not care (in this simplified equal particles assumption) which particle is in which square.
 
