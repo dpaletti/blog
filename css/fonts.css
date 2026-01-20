@@ -172,6 +172,14 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: "Fira Sans Small Caps";
+    src: url(fonts/FiraSans-Regular.woff2);
+    font-style: normal;
+    font-weight: normal;
+    font-variant: small-caps;
+}
+
 
 @font-face {
     font-family: "Fira Sans";

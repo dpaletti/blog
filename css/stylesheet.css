@@ -19,6 +19,7 @@
     --fw-bold: 550;
 
     --fs-sm: 0.75rem;
+    --fs-sl: 1rem;
     --fs-base: 1.25rem;
     --fs-md: 1.75rem;
     --fs-lg: 2.25rem;
@@ -63,12 +64,7 @@ body {
     font-family: var(--f-sans);
     font-weight: var(--fw-light);
     line-height: 1.5;
-<<<<<<< HEAD
-
-=======
-    
     box-sizing: border-box;
->>>>>>> 5b34b2b (fixed mobile behaviour)
     padding: 0 var(--gutter);
     margin: 0;
     max-width: 70rem;
@@ -105,12 +101,13 @@ header {
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
-    font-variant: small-caps;
     gap: var(--spacing-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
 }
 
 .navbar-item {
-    font-size: var(--fs-base);
+    font-size: var(--fs-sl);
     outline: var(--border-width) solid var(--c-text);
     padding: 0;
     display: block;
@@ -300,7 +297,7 @@ footer {
     outline: var(--border-width) solid var(--c-text);
     padding: 0.4rem;
     margin-right: 0.2rem;
-    font-variant: small-caps;
+    text-transform: uppercase;
     font-size: var(--fs-sm);
     text-decoration: none;
 }
@@ -324,16 +321,13 @@ footer {
         flex-direction: column;
     }
 
-<<<<<<< HEAD
     .system-arch,
-=======
     .beside > * {
         width: 100% !important;
         max-width: 100%;
     }
     
     .system-arch, 
->>>>>>> 5b34b2b (fixed mobile behaviour)
     .img-container,
     .about-text {
         width: 100%;

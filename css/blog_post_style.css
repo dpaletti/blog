@@ -108,7 +108,7 @@ blockquote p {
 }
 
 blockquote h1 {
-    font-variant: small-caps;
+    text-transform: uppercase;
     font-size: var(--fs-base);
     margin-bottom: var(--spacing-sm);
 }
