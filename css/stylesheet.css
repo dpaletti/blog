@@ -117,7 +117,7 @@ header {
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
-    gap: var(--spacing-sm);
+    gap: calc(var(--spacing-sm) / 2);
     text-transform: uppercase;
     letter-spacing: 0.08em;
 }
@@ -185,7 +185,7 @@ header {
 .scrollable-container > a {
     text-decoration: none;
     display: block;
-    padding: var(--spacing-sm);
+    padding: var(--spacing-ss);
 }
 
 /* --- List & Cell Items --- */
@@ -381,7 +381,7 @@ footer {
         flex-direction: column;
         width: 100%;
         align-items: center;
-        gap: var(--spacing-sm);
+        gap: var(--spacing-ss);
     }
 
     /* 4. Make the buttons a uniform, tappable size */
