@@ -25,9 +25,7 @@
     --fs-md:   clamp(1.2rem, 1.2vw + 1.2rem, 1.5rem);
     --fs-lg:   clamp(1.7rem, 1.2vw + 1.2rem, 2rem);
     --fs-x:    clamp(1.8rem, 1.6vw + 1.3rem, 2.25rem);
-    --fs-xl:   clamp(2rem, 2.2vw + 1.5rem, 3rem);
-
-
+    --fs-xl:   clamp(2rem, 2vw + 1.5rem, 3rem);
 
     --spacing-ss: 0.25rem;
 
@@ -163,7 +161,7 @@ header {
     font-size: var(--fs-xl);
     padding-top: var(--spacing-xl);
     line-height: 1.8;
-    white-space: nowrap;
+    word-break: keep-all;
 
 }
 
@@ -175,8 +173,8 @@ header {
 
 .fill-viewport {
     position: relative;
-    margin-left: calc(var(--gutter) * -1);
-    margin-right: calc(var(--gutter) * -1);
+    margin-left: var(--gutter);
+    margin-right: var(--gutter);
 
 }
 
