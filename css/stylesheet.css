@@ -283,6 +283,11 @@ footer {
     line-height: 0;
 }
 
+.rss-icon-img {
+    height: var(--fs-x);
+    width: var(--fs-x);
+}
+
 /* --- Utilities --- */
 
 .yellow:hover {
