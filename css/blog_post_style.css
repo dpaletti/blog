@@ -13,7 +13,7 @@
     display: block;
     font-family: var(--f-serif);
     font-weight: var(--fw-bold);
-    font-size: var(--fs-lg);
+    font-size: var(--fs-md);
     margin-bottom: var(--spacing-sm);
     color: var(--c-text);
 }
