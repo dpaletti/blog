@@ -1,10 +1,10 @@
 ---
 title: Entropies
-summary: "Towards a working definition of entropy"
+summary: "Making sense of entropies"
 date: 2025-02-25
 ---
 
-# Towards a working definition of entropy
+# Making sense of entropies
 
 What’s entropy? Or better, what’s a working definition of entropy we can use to understand the term when it is used across multiple contexts?
 
@@ -254,6 +254,8 @@ Aside from this nitpick, we made a spectacular leap. Sinai and Kolmogorov throug
 
 ## Conclusions
 
-From Clausius all the way to Renyi. We started with a definition of entropy that would not accommodate much of what we frequently say when talking about entropy. Then we found the culprit, after Boltzmann work entropy becomes a quantification of uncertainty for a given observer with a given interest in the system under scrutiny. Then, Gibbs paved the way and Shannon freed entropy from thermodynamics to make it a universal quantity. Kolmogorov and Sinai extended entropy to dynamical systems theory creating a powerful concept that can be applied through the lens of the entropy production rate. Finally, Renyi generalized Shannon’s work retaining the theoretical framework but greatly increasing the applicability.
+From Clausius all the way to Kolmogorov. We started with a definition of entropy that would not accommodate much of what we frequently say when talking about entropy. Then we found the culprit, after Boltzmann work entropy becomes a quantification of uncertainty for a given observer with a given interest in the system under scrutiny. Then, Gibbs paved the way and Shannon freed entropy from thermodynamics to make it a universal quantity. Renyi generalized Shannon’s work retaining the theoretical framework but greatly increasing the applicability. Finally, Kolmogorov and Sinai extended entropy to dynamical systems theory moving from a fixed value to entropy production rate useful for directing entropy to systems rather than transformations.
+
+Through Boltzmann lens the most actionable definition of entropy si **entropy as uncertainty**: how much we do not know about a system given what we already know and what we want to know. Entropy is linked to the observer and the interest she has in the system under scrutiny. Stochasticity introduces uncertainty about a system and we can use entropy to quantify how hard is to get more information to fill the knowledge gaps we have.
 
 Much more work has been done on entropy in quantum physics and cosmology for example. I think that these works have not yet entered the pop discourse (maybe for the lack of consensus) so I decided not to take them into account.
