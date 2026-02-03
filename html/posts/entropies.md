@@ -6,7 +6,7 @@ date: 2025-02-25
 
 # Making sense of entropies
 
-What’s entropy? Or better, what’s a working definition of entropy we can use to understand the term when it is used across multiple contexts?
+What’s a working definition of entropy we can use to understand the term when it is used across multiple contexts?
 
 The complexity stems from the vast number of definitions given formally and informally through time. We will start with the first definition and work our way through some of the more modern ones to get a sense of what we mean and what we definitely should not mean when talking about entropy.
 
