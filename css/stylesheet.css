@@ -171,13 +171,6 @@ header {
     margin: var(--spacing-md) 0;
 }
 
-.fill-viewport {
-    position: relative;
-    margin-left: var(--gutter);
-    margin-right: var(--gutter);
-
-}
-
 .scrollable-container {
     margin: var(--spacing-ss) 0 var(--spacing-ss) 0;
 }
