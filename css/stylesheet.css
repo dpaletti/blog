@@ -319,6 +319,10 @@ footer {
     text-transform: uppercase;
     font-size: var(--fs-sm);
     text-decoration: none;
+    word-break: keep-all;  
+    hyphens: none;         
+    white-space: nowrap;   
+
 }
 
 .under-title {
