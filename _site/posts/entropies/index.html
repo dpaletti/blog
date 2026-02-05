@@ -15,20 +15,21 @@
     <a href="../../.." class="navbar-logo">
         <img src="../../../assets/portfolio_logo.svg">
     </a>
-    <div class="navbar-links">
-        <div class="navbar-item yellow"> <a class="disable-jquery-coloring navbar-link" href="../../../blog/index.html">blog</a></div>
-        <div class="navbar-item blue"> <a class="disable-jquery-coloring navbar-link" href="../../../projects/index.html">projects</a></div>
-        <div class="navbar-item red"> <a class="disable-jquery-coloring navbar-link" href="../../../about/index.html">about</a></div>
-    </div>
+    <ul class="navbar-links">
+        <li class="navbar-item yellow"> <a class="disable-jquery-coloring navbar-link" href="../../../blog/index.html">blog</a></li>
+        <li class="navbar-item blue"> <a class="disable-jquery-coloring navbar-link" href="../../../projects/index.html">projects</a></li>
+        <li class="navbar-item red"> <a class="disable-jquery-coloring navbar-link" href="../../../about/index.html">about</a></li>
+    </ul>
 </header>
 
 
-<body>
+
+<body class="">
 
 
 <div class="blog-post-content">
-    <h1>Towards a working definition of entropy</h1>
-<p>What’s entropy? Or better, what’s a working definition of entropy we can use to understand the term when it is used across multiple contexts?</p>
+    <h1>Making sense of entropies</h1>
+<p>What’s a working definition of entropy we can use across multiple contexts?</p>
 <p>The complexity stems from the vast number of definitions given formally and informally through time. We will start with the first definition and work our way through some of the more modern ones to get a sense of what we mean and what we definitely should not mean when talking about entropy.</p>
 <nav class="toc">
     <ul>
@@ -230,7 +231,8 @@ Does this seem disordered? I would not say so, maybe someone would. It is import
 <p>Which is not necessarily a definition of disorder.</p>
 <p>Aside from this nitpick, we made a spectacular leap. Sinai and Kolmogorov through their work connected information theory and dynamical systems theory. We now have an entropy definition to quantify entropy production rate, that is the behavior of a whole system. Until now we have been characterizing states while now we have a new layer of abstraction on top, systems can now have an entropy regardless of their initial state.</p>
 <h2>Conclusions</h2>
-<p>From Clausius all the way to Renyi. We started with a definition of entropy that would not accommodate much of what we frequently say when talking about entropy. Then we found the culprit, after Boltzmann work entropy becomes a quantification of uncertainty for a given observer with a given interest in the system under scrutiny. Then, Gibbs paved the way and Shannon freed entropy from thermodynamics to make it a universal quantity. Kolmogorov and Sinai extended entropy to dynamical systems theory creating a powerful concept that can be applied through the lens of the entropy production rate. Finally, Renyi generalized Shannon’s work retaining the theoretical framework but greatly increasing the applicability.</p>
+<p>From Clausius all the way to Kolmogorov. We started with a definition of entropy that would not accommodate much of what we frequently say when talking about entropy. Then we found the culprit, after Boltzmann work entropy becomes a quantification of uncertainty for a given observer with a given interest in the system under scrutiny. Then, Gibbs paved the way and Shannon freed entropy from thermodynamics to make it a universal quantity. Renyi generalized Shannon’s work retaining the theoretical framework but greatly increasing the applicability. Finally, Kolmogorov and Sinai extended entropy to dynamical systems theory moving from a fixed value to entropy production rate useful for directing entropy to systems rather than transformations.</p>
+<p>Through Boltzmann lens the most actionable definition of entropy si <strong>entropy as uncertainty</strong>: how much we do not know about a system given what we already know and what we want to know. Entropy is linked to the observer and the interest she has in the system under scrutiny. Stochasticity introduces uncertainty about a system and we can use entropy to quantify how hard is to get more information to fill the knowledge gaps we have.</p>
 <p>Much more work has been done on entropy in quantum physics and cosmology for example. I think that these works have not yet entered the pop discourse (maybe for the lack of consensus) so I decided not to take them into account.</p>
 
 </div>

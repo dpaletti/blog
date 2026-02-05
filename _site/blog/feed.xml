@@ -15,8 +15,8 @@
     <link href="https://dpaletti.com/posts/entropies/" />
     <updated>2025-02-25T00:00:00Z</updated>
     <id>https://dpaletti.com/posts/entropies/</id>
-    <content type="html">&lt;h1&gt;Towards a working definition of entropy&lt;/h1&gt;
-&lt;p&gt;What’s entropy? Or better, what’s a working definition of entropy we can use to understand the term when it is used across multiple contexts?&lt;/p&gt;
+    <content type="html">&lt;h1&gt;Making sense of entropies&lt;/h1&gt;
+&lt;p&gt;What’s a working definition of entropy we can use across multiple contexts?&lt;/p&gt;
 &lt;p&gt;The complexity stems from the vast number of definitions given formally and informally through time. We will start with the first definition and work our way through some of the more modern ones to get a sense of what we mean and what we definitely should not mean when talking about entropy.&lt;/p&gt;
 &lt;nav class=&quot;toc&quot;&gt;
     &lt;ul&gt;
@@ -218,7 +218,8 @@ Does this seem disordered? I would not say so, maybe someone would. It is import
 &lt;p&gt;Which is not necessarily a definition of disorder.&lt;/p&gt;
 &lt;p&gt;Aside from this nitpick, we made a spectacular leap. Sinai and Kolmogorov through their work connected information theory and dynamical systems theory. We now have an entropy definition to quantify entropy production rate, that is the behavior of a whole system. Until now we have been characterizing states while now we have a new layer of abstraction on top, systems can now have an entropy regardless of their initial state.&lt;/p&gt;
 &lt;h2&gt;Conclusions&lt;/h2&gt;
-&lt;p&gt;From Clausius all the way to Renyi. We started with a definition of entropy that would not accommodate much of what we frequently say when talking about entropy. Then we found the culprit, after Boltzmann work entropy becomes a quantification of uncertainty for a given observer with a given interest in the system under scrutiny. Then, Gibbs paved the way and Shannon freed entropy from thermodynamics to make it a universal quantity. Kolmogorov and Sinai extended entropy to dynamical systems theory creating a powerful concept that can be applied through the lens of the entropy production rate. Finally, Renyi generalized Shannon’s work retaining the theoretical framework but greatly increasing the applicability.&lt;/p&gt;
+&lt;p&gt;From Clausius all the way to Kolmogorov. We started with a definition of entropy that would not accommodate much of what we frequently say when talking about entropy. Then we found the culprit, after Boltzmann work entropy becomes a quantification of uncertainty for a given observer with a given interest in the system under scrutiny. Then, Gibbs paved the way and Shannon freed entropy from thermodynamics to make it a universal quantity. Renyi generalized Shannon’s work retaining the theoretical framework but greatly increasing the applicability. Finally, Kolmogorov and Sinai extended entropy to dynamical systems theory moving from a fixed value to entropy production rate useful for directing entropy to systems rather than transformations.&lt;/p&gt;
+&lt;p&gt;Through Boltzmann lens the most actionable definition of entropy si &lt;strong&gt;entropy as uncertainty&lt;/strong&gt;: how much we do not know about a system given what we already know and what we want to know. Entropy is linked to the observer and the interest she has in the system under scrutiny. Stochasticity introduces uncertainty about a system and we can use entropy to quantify how hard is to get more information to fill the knowledge gaps we have.&lt;/p&gt;
 &lt;p&gt;Much more work has been done on entropy in quantum physics and cosmology for example. I think that these works have not yet entered the pop discourse (maybe for the lack of consensus) so I decided not to take them into account.&lt;/p&gt;
 </content>
   </entry>
