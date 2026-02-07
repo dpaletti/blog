@@ -14,28 +14,30 @@ relative_path: ../..
     <link rel="stylesheet" href="{{ relative_path }}/css/katex.min.css">
     <title>{{ title }}</title>
 
-    <!-- Primary Meta Tags -->
-    <title>{{ title or metadata.title }}</title>
-    <meta name="title" content="{{ title or metadata.title }}">
-    <meta name="description" content="{{ summary or description or metadata.description }}">
+    <!-- Title -->
+    <title></title>
 
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="{{ title or metadata.title}}">
+    <meta name="description" content="{{ summary or metadata.summary}}">
 
     <!-- Open Graph -->
-    <meta property="og:type" content="{{ ogType or 'website' }}">
+    <meta property="og:type" content="{{ ogType or "website"}}">
     <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
-    <meta property="og:title" content="{{ title or metadata.title }}">
-    <meta property="og:description" content="{{ description or metadata.description }}">
+    <meta property="og:title" content="{{ title or metadatata.title}}">
+    <meta property="og:description" content="{{ summary or metadata.summary}}">
     {% if image %}
     <meta property="og:image" content="{{ metadata.url }}{{ image }}">
     {% elif metadata.image %}
     <meta property="og:image" content="{{ metadata.url }}{{ metadata.image }}">
     {% endif %}
 
+    <!-- Article specific metadata -->
     {% if ogType == 'article' %}
-      <meta property="article:published_time" content="{{ date | dateToISO }}">
-      <meta property="article:author" content="{{ metadata.author.name }}">
+    <meta property="article:published_time" content="{{ date }}">
+    <meta property="article:author" content="{{ metadata.author.name }}">
     {% endif %}
-    
+
 </head>
 
 <header>
