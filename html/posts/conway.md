@@ -1,6 +1,7 @@
 ---
 title: Conway's law
 summary: "Beyond Conway's law: bridging structure and function"
+ogType: "article"
 date: 2025-02-25
 ---
 
