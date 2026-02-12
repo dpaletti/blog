@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: docker
+    runs-on: personal_vps
 
     strategy:
       matrix:
