@@ -1,3 +1,9 @@
+# TODO
+- add front matter
+- add toc
+- fix third level headlines font size
+- implement syntax higlighting for code blocks
+
 # Escaping big tech
 ## The mission
 Replacing big tech platforms with self-hosted solutions:
