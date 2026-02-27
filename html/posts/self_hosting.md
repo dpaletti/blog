@@ -6,6 +6,7 @@ date: 2026-02-27
 ---
 
 # From big to accurate tech: my self-hosted setup
+
 ## The mission {#the-mission}
 Replacing big tech platforms with self-hosted solutions:
 - google drive and calendar -> [nextcloud](https://nextcloud.com/)
@@ -24,15 +25,15 @@ All this lives on a Hetzner's CX33 (~ 6.50 euro/month) with a 100GB SSD volume (
 I decided not to selfhost emails as it is quite tricky not to get your emails flagged as spam. What I did instead was subscribe to a standard plan at [mailbox.org](https://mailbox.org/en/) and use this websites’s domain as a custom domain for my email (~ 3 euro/month).
 <nav class="toc">
     <ul>
-        <li><a href="#the-tools">Tools</a></li>
-        <li><a href="#the-execution">Execution</a>
+        <li><a href="#the-tools">Tools: what services I deployed</a></li>
+        <li><a href="#the-execution">Execution: how I deployed them</a>
         <ul>
-           <li><a href="#caddy-setup">Caddy Setup</a></li>
-           <li><a href="#headscale-setup">Headscale Setup</a></li>
-           <li><a href="#firewalld">Firewalld</a></li>
-           <li><a href="#deployment">Deployment</a></li>
+           <li><a href="#caddy-setup">Caddy Setup: reverse-proxy configuration</a></li>
+           <li><a href="#headscale-setup">Headscale Setup: device authentication for remote access</a></li>
+           <li><a href="#firewalld">Firewalld: keeping everything reasonably secure</a></li>
+           <li><a href="#deployment">Deployment: putting it all together on a VPS</a></li>
         </ul></li>
-        <li><a href="#the-conclusion">Conclusion</a></li>
+        <li><a href="#the-conclusion">Conclusions</a></li>
     </ul>
 </nav>
 
@@ -355,7 +356,7 @@ Finally we apply firewall and docker config using SSH keys we are keeping as sec
             ./firewalld_config.sh
             docker compose up -d
 ```
-# Conclusion {#the-conclusion}
+# Conclusions {#the-conclusion}
 It’s been quite a ride. This setup has been working for several months without additional tweaking. Removing platforms from my life has been really beneficial. Far lowered general internet usage, got back to discovering music and movies from long-form blogs instead of doom scrolling algorithms. Along these lines, I have also opened a [Mastodon profile](https://social.coop/@dpaletti) which helps me discovering interesting people and discussions, I have been using it with Phanpy
 
 [Yunohost](https://yunohost.org/) can be a really good tradeoff between effort and independence leaving the most with no excuses to keep using enshittified, expensive, privacy violating services.

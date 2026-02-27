@@ -33,15 +33,15 @@
 &lt;p&gt;I decided not to selfhost emails as it is quite tricky not to get your emails flagged as spam. What I did instead was subscribe to a standard plan at &lt;a href=&quot;https://mailbox.org/en/&quot;&gt;mailbox.org&lt;/a&gt; and use this websites’s domain as a custom domain for my email (~ 3 euro/month).&lt;/p&gt;
 &lt;nav class=&quot;toc&quot;&gt;
     &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&quot;https://dpaletti.com/posts/self_hosting/#the-tools&quot;&gt;Tools&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;https://dpaletti.com/posts/self_hosting/#the-execution&quot;&gt;Execution&lt;/a&gt;
+        &lt;li&gt;&lt;a href=&quot;https://dpaletti.com/posts/self_hosting/#the-tools&quot;&gt;Tools: what services I deployed&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;https://dpaletti.com/posts/self_hosting/#the-execution&quot;&gt;Execution: how I deployed them&lt;/a&gt;
         &lt;ul&gt;
-           &lt;li&gt;&lt;a href=&quot;https://dpaletti.com/posts/self_hosting/#caddy-setup&quot;&gt;Caddy Setup&lt;/a&gt;&lt;/li&gt;
-           &lt;li&gt;&lt;a href=&quot;https://dpaletti.com/posts/self_hosting/#headscale-setup&quot;&gt;Headscale Setup&lt;/a&gt;&lt;/li&gt;
-           &lt;li&gt;&lt;a href=&quot;https://dpaletti.com/posts/self_hosting/#firewalld&quot;&gt;Firewalld&lt;/a&gt;&lt;/li&gt;
-           &lt;li&gt;&lt;a href=&quot;https://dpaletti.com/posts/self_hosting/#deployment&quot;&gt;Deployment&lt;/a&gt;&lt;/li&gt;
+           &lt;li&gt;&lt;a href=&quot;https://dpaletti.com/posts/self_hosting/#caddy-setup&quot;&gt;Caddy Setup: reverse-proxy configuration&lt;/a&gt;&lt;/li&gt;
+           &lt;li&gt;&lt;a href=&quot;https://dpaletti.com/posts/self_hosting/#headscale-setup&quot;&gt;Headscale Setup: device authentication for remote access&lt;/a&gt;&lt;/li&gt;
+           &lt;li&gt;&lt;a href=&quot;https://dpaletti.com/posts/self_hosting/#firewalld&quot;&gt;Firewalld: keeping everything reasonably secure&lt;/a&gt;&lt;/li&gt;
+           &lt;li&gt;&lt;a href=&quot;https://dpaletti.com/posts/self_hosting/#deployment&quot;&gt;Deployment: putting it all together on a VPS&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;https://dpaletti.com/posts/self_hosting/#the-conclusion&quot;&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;https://dpaletti.com/posts/self_hosting/#the-conclusion&quot;&gt;Conclusions&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
 &lt;/nav&gt;
 &lt;h2 id=&quot;the-tools&quot;&gt;Tools&lt;/h2&gt;
@@ -329,7 +329,7 @@ First we checkout the repo and retrieve secrets (much like github) and paste the
             chmod +x firewalld_config.sh
             ./firewalld_config.sh
             docker compose up -d&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&quot;the-conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+&lt;h1 id=&quot;the-conclusion&quot;&gt;Conclusions&lt;/h1&gt;
 &lt;p&gt;It’s been quite a ride. This setup has been working for several months without additional tweaking. Removing platforms from my life has been really beneficial. Far lowered general internet usage, got back to discovering music and movies from long-form blogs instead of doom scrolling algorithms. Along these lines, I have also opened a &lt;a href=&quot;https://social.coop/@dpaletti&quot;&gt;Mastodon profile&lt;/a&gt; which helps me discovering interesting people and discussions, I have been using it with Phanpy&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://yunohost.org/&quot;&gt;Yunohost&lt;/a&gt; can be a really good tradeoff between effort and independence leaving the most with no excuses to keep using enshittified, expensive, privacy violating services.&lt;/p&gt;
 </content>

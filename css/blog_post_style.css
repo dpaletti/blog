@@ -58,7 +58,7 @@ pre[class*=language-] {
 
 
 .toc ul ul li {
-    font-size: var(--fs-base);
+    font-size: var(--fs-sl);
     line-height: 1.4;
     margin-bottom: 0.2rem;
 }
