@@ -2,14 +2,13 @@
 title: Entropies
 summary: "Making sense of entropies"
 ogType: "article"
-date: 2025-02-25
+date: 2026-01-25
 ---
 
 # Making sense of entropies
 What’s a working definition of entropy we can use across multiple contexts?
 
 The complexity stems from the vast number of definitions given formally and informally through time. We will start with the first definition and work our way through some of the more modern ones to get a sense of what we mean and what we definitely should not mean when talking about entropy.
-
 <nav class="toc">
     <ul>
         <li><a href="#clausius">Clausius (1854): Classical Thermodynamics</a></li>

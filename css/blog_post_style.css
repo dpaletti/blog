@@ -1,8 +1,18 @@
 /* Note: Variables are inherited from stylesheet.css */
 
+code[class*="language-"],
+pre[class*="language-"] {
+    font-family: var(--f-mono);
+}
+
+pre[class*=language-] {
+    padding: 0;
+    margin: 0 0 var(--spacing-md) 0;
+}
+
 .toc {
     font-size: var(--fs-md);
-    margin: var(--spacing-xl) 0;
+    margin: var(--spacing-lg) 0;
     padding-left: var(--spacing-lg);
     border-left: var(--border-width) solid var(--c-text);
     color: var(--c-text-muted);
@@ -17,6 +27,7 @@
     margin-bottom: var(--spacing-sm);
     color: var(--c-text);
 }
+
 .toc a {
     text-decoration: none;
     color: inherit;
@@ -41,6 +52,18 @@
     padding-left: 0;
 }
 
+.toc ul ul {
+    padding: var(--spacing-sm) 0 var(--spacing-ss) var(--spacing-sm);
+}
+
+
+.toc ul ul li {
+    font-size: var(--fs-base);
+    line-height: 1.4;
+    margin-bottom: 0.2rem;
+}
+
+
 .blog-post-content {
     margin-left: auto;
     margin-right: auto;
@@ -50,7 +73,7 @@ h1 {
     font-family: var(--f-serif);
     font-weight: bold;
     color: var(--c-text);
-    font-size: var(--fs-lg);
+    font-size: var(--fs-xl);
     margin-top: var(--spacing-lg);
     margin-bottom: var(--spacing-md);
     line-height: 1.5;
@@ -60,7 +83,7 @@ h2 {
     font-family: var(--f-serif);
     font-weight: bold;
     color: var(--c-text);
-    font-size: var(--fs-md);
+    font-size: var(--fs-x);
     margin-top: var(--spacing-lg);
     margin-bottom: var(--spacing-md);
     line-height: 1.5;
@@ -70,10 +93,10 @@ h3 {
     font-family: var(--f-serif);
     font-weight: bold;
     color: var(--c-text);
-    font-size: var(--fs-sm);
+    font-size: var(--fs-lg);
     margin-top: var(--spacing-md);
     margin-bottom: var(--spacing-md);
-    line-height:1.5;
+    line-height: 1.5;
 }
 
 p {
@@ -146,7 +169,8 @@ li {
     font-size: var(--fs-base);
     line-height: 1.6;
     margin-bottom: 0.5rem;
-    padding-left: 0.5rem; /* Space between bullet and text */
+    padding-left: 0.5rem;
+    /* Space between bullet and text */
 }
 
 li::marker {
