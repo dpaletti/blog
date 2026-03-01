@@ -5,24 +5,26 @@ ogType: "article"
 date: 2026-02-27
 ---
 
-# From big to accurate tech: my self-hosted setup
+# From Big to Accurate Tech: My Self Hosted Setup
 
-## The mission {#the-mission}
-Replacing big tech platforms with self-hosted solutions:
-- google drive and calendar -> [nextcloud](https://nextcloud.com/)
-- google photos -> [immich](https://immich.app/) 
-- spotify -> [navidrome](https://www.navidrome.org/)
-- github -> [codeberg](https://codeberg.org/)
-- gmail -> [mailbox](https://mailbox.org/en/)
-- hacker news -> [freshrss](https://www.freshrss.org/)
-- tailscale -> [headscale](https://headscale.net/stable/)
-- (bonus track) scattered note taking -> [silverbullet](https://silverbullet.md/)
+## The Mission {#the-mission}
 
-I built the system myself but you can get there in an afternoon with [yunohost](https://yunohost.org/). It provides a way to self-host a huge amount of apps through a unified interface. I chose not to use it as I wanted to experiment and learn myself how to do it.
+Replacing big tech platforms and subscriptions with self hosted solutions:
 
-All this lives on a Hetzner's CX33 (~ 6.50 euro/month) with a 100GB SSD volume (~3.50 euro/month) and is fully open-source.
+- Google Drive and calendar -> [Nextcloud](https://nextcloud.com/)
+- Google Photos -> [Immich](https://immich.app/)
+- Spotify -> [Navidrome](https://www.navidrome.org/)
+- Github -> [Codeberg](https://codeberg.org/)
+- Gmail -> [Mailbox](https://mailbox.org/en/)
+- Hacker News -> [Freshrss](https://www.freshrss.org/)
+- Tailscale -> [Headscale](https://headscale.net/stable/)
+- (bonus track) scattered note taking -> [Silverbullet](https://silverbullet.md/)
 
-I decided not to selfhost emails as it is quite tricky not to get your emails flagged as spam. What I did instead was subscribe to a standard plan at [mailbox.org](https://mailbox.org/en/) and use this websites’s domain as a custom domain for my email (~ 3 euro/month).
+I built the system myself but you can get there in an afternoon with [Yunohost](https://yunohost.org/). Yunohost provides a way to self-host a wide array of apps through a unified interface. I chose not to use it as I wanted to experiment and learn myself how to do it.
+
+All this lives on a Hetzner's CX33 with a 100GB SSD volume (~10 euro/month) with a fully open-source implementation.
+
+I decided not to self host emails as it gets tricky not to get your emails flagged as spam. Instead, I subscribed to a standard plan at [mailbox.org](https://mailbox.org/en/) and use this website's domain as a custom domain for my email (~ 3 euro/month).
 <nav class="toc">
     <ul>
         <li><a href="#the-tools">Tools: what services I deployed</a></li>
@@ -39,54 +41,54 @@ I decided not to selfhost emails as it is quite tricky not to get your emails fl
 
 ## Tools {#the-tools}
 
-- **Nextcloud**: does not need many introductions, a self-hosted cloud service with far more features you will ever use. Used in production by individuals and companies alike. I use it for the sheer simplicity of installing it through the [all in one container](https://github.com/nextcloud/all-in-one). I do not have many requirements for a service like this, I use it for **document and calendary syncing across devices**. All other features I don’t mind but there’s a ton.
+- **Nextcloud**: does not need many introductions, a self-hosted cloud service with far more features you will ever use. Used in production by individuals and companies alike. I use it for the sheer simplicity of installing it through the [all in one container](https://github.com/nextcloud/all-in-one). I do not have many requirements for a service like this, I use it for **documents and calendar syncing across devices**. All other features I don’t mind but there’s a ton.
 
-- **Immich**: the de-facto standard in open-source image archiving. Actively predates google photos by providing intelligent search and (local) machine-learning features. Clean UX both for the browser and the mobile versions. Provides features to transfer all your library from the most popular services and to batch process your images from the CLI.
+- **Immich**: the standard in open-source image archiving. Actively predates Google Photos by providing intelligent search and (local) machine-learning features. Clean UX both for the browser and the mobile versions. Provides features to load all your library from the most popular services and to batch process your images from the CLI.
 
-- **Navidrome**: Spotify is unbearable, it got so much worse that I could not justify paying for it. I won’t even start on just artist retribution and [AI-weapons support](https://www.deedsmag.com/stories/what-spotifys-latest-controversy-reveals).
-Navidrome is not perfect but it works. It is an old-school program, it does just one thing, the music server. This means it does not embed any music player whatsoever, you will need dedicated clients for streaming your music library. I am using [Tempo](https://github.com/CappielloAntonio/tempo) for mobile and [Supersonic](https://github.com/dweymouth/supersonic) for desktop, both quite simple apps that just work. [Symphonium](https://www.symfonium.app/) is pretty widely used but it's closed source, which is a nono.
+- **Navidrome**: Spotify is unbearable, it got so much worse I could not justify paying for it. I don't want a social media platform full of ads and a schizophrenic variety of media content, I just want to listen to the music I like. And don't get me started on artist retribution and [AI-weapons support](https://www.deedsmag.com/stories/what-spotifys-latest-controversy-reveals).
+Navidrome just works, a simple music server without playback capabilities but all the music organization features you would expect from a modern service. This means, you will need dedicated clients for streaming your music library. [Tempo](https://github.com/CappielloAntonio/tempo) on mobile and [Supersonic](https://github.com/dweymouth/supersonic) on desktop work well for my purposes. [Symphonium](https://www.symfonium.app/) has many aficionados but I purposedly decided to avoid closed source implementations. If willing to host movies, books, and other multimedia content take a look at [Jellyfin](https://jellyfin.org/)
 
-- **Codeberg + self-hosted Forgejo actions**: I won’t get in too much detail here as I will publish a more in-depth article on Git forges and git alternatives in a bit. [Codeberg](https://codeberg.org/) is a fully-fledged github alternative that under the hood uses [ForgeJo](https://forgejo.org/)  as a git forge. Think of a git forge as a git server with added features such as pull-requests, project management, wikis, static website serving, and all the other services you expect from Github, Gitlab, Gitea and the likes. I am a firm believer in the publish once syndicate everywhere strategy ([POSSE](https://indieweb.org/POSSE)) so I will be still mirroring to github most of my repos but the core of my work will be developed on [my codeberg account](https://codeberg.org/dpaletti/). That said, as of now I am not hosting my forgejo instance but I am hosting my own forgejo runners (github job runners equivalent) so that I do not have CI limitations and still get to support Codeberg which is a really nice initiative (more on this in the next article).
+- **Codeberg + self-hosted Forgejo actions**: I won’t get in too much detail here as I will publish a more in-depth article on Git forges and git alternatives in a bit. [Codeberg](https://codeberg.org/) is a fully-fledged Github alternative that uses [Forgejo](https://forgejo.org/) under the hood as a git forge. Think of a git forge as a git server with added features such as pull-requests, project management, wikis, static website serving, and all the other features you expect from Github, GitLab, Gitea, and the like. I believe in the publish once syndicate everywhere strategy ([POSSE](https://indieweb.org/POSSE)), so I will run development on [my Codeberg account](https://codeberg.org/dpaletti/) and mirror almost everything on Github. I could host Forgejo myself but I like Codeberg and don't feel the need to add complexity to my deployment. Instead, I host my own Forgejo runners (Gitbub job runners equivalent) to overcome CI limitations while still supporting Codeberg.
 
+- **Freshrss**: RSS is one of the most underrated internet technologies. Many websites provide RSS feeds: an updated registry of the content published on a given website. All these feeds get aggregated through apps such as Freshrss, an RSS feed aggregator that just works. Clean UI (that’s an acquired taste I fear) and high quality clients like [Capy Reader](https://capyreader.com/) on Android and the Freshrss web interface on desktop. Supports categories, feeds, and many RSS variations. Definitely the best way to stay updated across scattered blogs, newspapers, and news aggregators (finally ditched Hacker News for the better, maybe in a later article I will discuss some cool technology blogs and aggregators).
 
-- **Freshrss**: RSS is one of the most underrate internet technologies. Several websites provide RSS feeds, that is a daily/weekly update on new content you can aggregate all in one app. That app is FreshRSS, a RSS feed aggregator that just works. Clean UI (that’s an acquired taste I fear) and very high quality clients, I am using [Capy Reader](https://capyreader.com/) and the FreshRSS web interface from desktop. Supports categories, feeds and many RSS variations. Definitely the best way to stay updated across multiple blogs, newspapers and news aggregators (still reading Hacker News, not proud of it though).
+- **Silverbullet**: one of the services I use the most. [Silverbullet](https://silverbullet.md/) is a note-taking browser based application with progressive web apps for all platforms that actually works. I use it mainly from my laptop but I do minor edits from my mobile, works seamlessly. Great level of UX polish, astounding number of features, Lua extensibility and distraction-free editing experience. Offline-first app with great syncing strategies and conflict resolution, the absence of ad hoc apps greatly simplifies the design and allows for a coherent experience across devices and operating systems. This is the first time that I think a progressive web app (PWA) is the right tool for the job. Silverbullet got me off of [org-mode](https://orgmode.org/) which is definitley an achievement in my book.
 
+- **Caddy**: along all the private services I am also serving this website. This is thanks to [Caddy](https://caddyserver.com/) which is a reverse-proxy that also handles certificate renewal so that this website and all other services are accessible through HTTPS. A reverse-proxy is just a way to have a unique entry point to all my services (we will see later how this is actually achieved) and then have my requests redirected to the correct service. Caddy is a tool that just works, there are many others, this works for me and I did not need to look much further. Through Caddy I am able to avoid Cloudflare while still keeping the website reasonably fast and secure.
 
-- **Silverbullet**: one of the services I use most. [Silverbullet](https://silverbullet.md/) is a note-taking browser based application with progressive web apps for all platforms that actually work. I use it mainly from my laptop but I do minor edits from my mobile, works seamlessly. Great level of UX polish, astounding number of features, Lua extensibility and distraction-free editing experience. Offline-first app with great syncing strategies and conflict resolution, the absence of adhoc apps greatly simplifies the design and allows for a very coherent experience across devices and operating systems. This is the first time that I think a progressive web app (PWA) is the right tools for the job. I have completely stopped using [org-mode](https://orgmode.org/) and the first time I actually feel I have the note taking app I want in my hands.
+- **Headscale**: self-hosted Tailscale. Tailscale is a mesh VPN but the coordination server it uses is not open-source, while the client is. The idea is to have a central door to which device registers for remote access. This way we can handle authentication seamlessly. That central door is the authentication server, and Headscale is an open-source implementation of such server. The Headscale repo is still basically in the hands of the Tailscale organization but this is the best I could do. I don't have many more ideas to easily manage device authentication. You will also need some clients and for that I am using the official Tailscale one which seems open-source (or code-available at least).
 
-
-- **Caddy**: from the same VPS I am also serving this website. This is thanks to [Caddy](https://caddyserver.com/) which is a reverse-proxy that also handles certificate renewal so that this website and all other services are accessible through HTTPS. A reverse-proxy is just a way to have a unique entrypoint and to all my services (we will see later how this is actually achieved) and then have my requests redirected to the correct service. Caddy is a tool that just works, there are many others, this works for me and I did not need to look much further but there are many alternatives. For me, automatic certificate management and renewal was enough. All in all, Caddy is a nice solution if you want to ditch Cloudflare.
-
-- **Headscale**: self-hosted tailscale. Tailscale is a mesh VPN but the coordination server it uses is not open-source, while the client is. The idea is to have a central door to which device must be registered otherwise they get rejectd. This way we can handle authentication seamlessly. That central door is the authentication server, and headscale is an open-source implementation of it. The headscale repo is still basically in the hands of the tailscale organization but this is the best I could do. I do not have many more ideas to easily manage device authentication. You will also need some clients and for that I am using the official tailscale clients.
-
-- **Beszel**: I needed something to monitor resource utilization and the state of all the services, Beszel perfectly fits this need. Incredibly easy to install and with a very polished web UI provides: resource utilization, service state, and log for all services. I evaluated a combo of graphana and prometheus but I did not want an overly complicated solution for my very limited needs.
-
+- **Beszel**: I needed something to monitor resource utilization and the state of all services, Beszel perfectly fits this need. Incredibly easy to install and with a polished web UI while providing: resource utilization, service state, and log for all services. I evaluated a combo of Graphana and Prometheus but I didn't want an overly complicated solution for my limited needs.
 
 ## Execution {#the-execution}
+
 From now on I will talk about the deployment you can find in my [repo](https://codeberg.org/dpaletti/self-hosted-services).
 
 The full deployment needs 3 files:
-- `docker-compose.yaml`: contains all services as docker containers and inlined configuration files for both Caddy and Headscale
+
+- `docker-compose.yaml`: contains all services as Docker containers and inlined configuration files for both Caddy and Headscale
 - `firewalld_config.sh`: a firewall(d) configuration script to block all traffic except what’s strictly necessary
 - `.env`: secrets and environment variables
 
-Many self-hostable services have docker-compose files ready to go you can simply add to your global configuration. Networking and security are a bit less straightforward but all in all is nothing esoteric. This is the high-level system diagram:
+Many self-hostable services have Docker compose files ready to go you can simply add to your global configuration. Networking and security are a bit less straightforward but all in all nothing esoteric. This is the high-level system diagram:
 
 ![VPS architecture](../../assets/posts/self_hosted_diagram.webp){width=90%, align="center"}
 
-
 When a request arrives:
-1. firewall blocks everything that is not HTTP(S) or SSH
-2. caddy acts as a reverse proxy managing HTTPS, rate limiting and hiding network topology
-3. then the request is filtered by headscale that checks whether the device sending the request is allowed to access the service is asking for
-4. if everything went well the service is accessible
+
+1. Firewall blocks everything that is not HTTP(S), SSH or specific TCP/UDP connections.
+2. Caddy acts as a reverse proxy managing HTTPS, rate limiting and hiding network topology.
+3. Then, the request gets filtered by Headscale that checks whether the device can access the required service.
+4. If everything went well the service is accessible.
 
 This kind of configuration allows for seamless access for authorized devices while keeping the server reasonably secure.
 
-We will now take a more in-depth look at some of the services that make this flow possible. I kept everything inside the single compose file to avoid scattering and ease both long maintenance and AI chatbot interaction (I need to copy paste the whole file and I am done). Yes, it’s no agentic AI setup but one of the main reason I developed this is to understand the ins and outs of the solution. On top of this, I did not want to lose control over the design, longterm maintenance cost is paramount and AI usually trades this off with shorterm sub-optimal working solutions that accrue a lot of technical debt over time. This is to say, I used AI sparingly to build this, mainly to round some corners.
+We will now take a more in-depth look at some of the services that make this flow possible. I kept everything inside a single compose file to avoid scattering and ease long term maintenance.
 
-### Caddy setup {#caddy-setup}
-Caddy is the reverse-proxy that handles all traffic to the server, including the traffic to this website. There is an official image that I extended with a plugin for rate limiting access to this blog:
+### Caddy Setup {#caddy-setup}
+
+Caddy is the reverse-proxy that handles all traffic to the server, including the traffic to this website. I extended the official docker image with a plugin for rate limiting access to this blog:
+
 ```dockerfile
 caddy:
   build:
@@ -111,9 +113,11 @@ caddy:
   - source: Caddyfile
     target: /etc/caddy/Caddyfile
 ```
-The idea here is using inline dockerfile to keep everything in one file as much as possible. So much that also the Caddy config file is inside the same docker-compose file. In this section and all the subsequent ones I will pick only the most relevant bits of the docker-compose file which is quite long (and boring) to be fully discussed in this article. Again, you find the full file in my [repo](https://codeberg.org/dpaletti/self-hosted-services).
+
+The idea here is using an inline Dockerfile to keep everything in one file, so much that also the Caddy config file is inside the same Docker compose file. In this section and all the following ones I will pick only the most relevant bits of the Docker compose file which is long (and boring) to be fully discussed in this article. Again, you find the full file in my [repo](https://codeberg.org/dpaletti/self-hosted-services).
 
 Then, to actually serve the blog and rate limit it:
+
 ```dockerfile
 configs:
   Caddyfile:
@@ -147,13 +151,16 @@ configs:
   }
 ```
 
-Any other service you want to add which you want to serve just needs basic reverse-proxy configuration. In my case, I decided to use this domain as the basis of all my networking configuration so for instance I wanted to access FreshRSS at `rss.dpaletti.com`. This means, that you need to setup DNS records at your domain registrar (I use [porkbun](https://porkbun.com/) and it works quite well) and then add to the caddy configuration something like:
+Any other service you want to add which you want to serve just needs basic reverse-proxy configuration. In my case, I decided to use this domain as the basis of all my networking configuration. This means, you need DNS records set up at your domain registrar (I use [Porkbun](https://porkbun.com/) and I would recommend it) and then add to the caddy configuration something like:
+
 ```dockerfile
 rss.$DOMAIN {
            reverse_proxy 127.0.0.1:8081
 }
 ```
-Above we assume that the FreshRSS service container is defined along the lines of:
+
+Above we assume that the Freshrss service container is akin to:
+
 ```dockerfile
   freshrss:
     image: freshrss/freshrss:latest
@@ -169,12 +176,15 @@ Above we assume that the FreshRSS service container is defined along the lines o
     ports:
       - "127.0.0.1:8081:80"
 ```
+
 Where the original port 80 gets mapped to 8081 so avoiding clash with other services which may use port 80 by default.
 
-At this point, we have a working reverse proxy configuration but anyone can access `rss.dpaletti.com`. In general, we assume a login page at that point but I would prefer to keep these services private given that I am also archiving personal photos and notes. To do this, we deploy headscale.
+At this point, we have a working reverse proxy configuration but anyone can access `rss.dpaletti.com`. In general, we assume a login page at that point but I would prefer to keep these services private given that I am also archiving personal photos and notes. To achieve this, we deploy Headscale.
 
 ### Headscale {#headscale-setup}
-The main objective here is having a way to securely connect to my services by recording which devices are allowed access to the services.
+
+The main goal here is having a way to securely connect to my services by recording device identities.
+
 ```dockerfile
 headscale:
     image: headscale/headscale:latest
@@ -198,12 +208,15 @@ headscale:
     healthcheck:
       test: ["CMD", "headscale", "health"]
 ```
-This is headscale docker-compose configuration, almost everything copy pasted from the docs with slight adaptations:
-1. configs: I decided I wanted to inline headscale config so to have everything in one file
-2. lables and networks: this is beszle specific config so that we can monitor resource utilization (you will find this attached to all services)
+
+This is Headscale Docker compose configuration, almost everything copy pasted from the docs with slight adaptations:
+
+1. Configs: I decided I wanted to inline Headscale config so to have everything in one file.
+2. Labels and networks: this is Beszel specific config so that we can monitor resource utilization (you will find this attached to all services)
 3. port mapping: avoid clash with other services
 
-Now we want to route traffic from caddy through tailscale. To accomplish this we need to slightly extend the caddy config file:
+Now we want to route traffic from caddy through Tailscale. We need to slightly extend the caddy config file:
+
 ```dockerfile
 (private) {
           @denied not remote_ip 100.64.0.0/10 fd7a:115c:a1e0::/48 127.0.0.1 ::1 2a01:4f8:1c1a:5a7b::1
@@ -211,7 +224,8 @@ Now we want to route traffic from caddy through tailscale. To accomplish this we
       }
 ```
 
-This rule checks whether the device is succesfully logged into tailscale, if not it gets bounced. Last step is enforcing this rule for all traffic we want to filter, our FreshRSS rule becomes:
+This rule checks whether the device is successfully logged into Tailscale, else it gets bounced. Last step is enforcing this rule for all traffic we want to filter, our Freshrss rule becomes:
+
 ```dockerfile
 rss.$DOMAIN {
          import private
@@ -219,7 +233,8 @@ rss.$DOMAIN {
 }
 ```
 
-At this point, we need the tailscale log-in flow to work. To accomplish that we expose the headscale coordination server through Caddy and we configure it appropriately:
+At this point, we need the Tailscale log-in flow to work. We expose the Headscale coordination server through Caddy and we configure it appropriately:
+
 ```dockerfile
  headscale.$DOMAIN {
    handle /web* {
@@ -228,37 +243,11 @@ At this point, we need the tailscale log-in flow to work. To accomplish that we 
   }
 ```
 
+The trickiest part is the Headscale config:
 
-The trickiest part is the headscale-config:
 ```dockerfile
       server_url: https://headscale.dpaletti.com:443
       [... defaults skipped, find the whole config in the repo ...]
-      derp:
-        server:
-          enabled: true
-          region_id: 999
-
-          region_code: "headscale"
-          region_name: "Headscale Embedded DERP"
-
-          verify_clients: true
-
-          stun_listen_addr: "0.0.0.0:3478"
-
-          private_key_path: /var/lib/headscale/derp_server_private.key
-
-          automatically_add_embedded_derp_region: true
-
-          ipv4: 46.224.25.148
-
-        urls: []
-
-        paths: []
-
-        auto_update_enabled: false
-
-        update_frequency: 3h
-
       dns:
         magic_dns: true
 
@@ -284,12 +273,15 @@ The trickiest part is the headscale-config:
             value: "fd7a:115c:a1e0::1"
     [... some more defaults ...]
 ```
-The most important section is noting that for every service I want to expose I need to update magic DNS so that headscale correctly redirects to the requested service.
 
-This allows to expose services on subdomains of the domain hosting my blog while keeping access only to desired devices without recurring to Tailscale’s closed source coordination server.
+The most important section is noting that for every service I want to expose I need appropriate magic DNS records so that Headscale correctly routes to the requested service.
+
+This embeds services on subdomains of the domain hosting my blog while keeping access only to desired devices without recurring to Tailscale closed source coordination server.
 
 ### Firewalld {#firewalld}
-[Firewalld](https://firewalld.org/) is truely great and easy to use. The main idea is that changes can be done immediately in the runtime environment without service restart. I am not an expert on this, so I got a very barebones configuration practically blacklisting all connections and keeping only the ones I needed. On top of that, I enabled masquerading (network address translation) to allow FreshRSS to download the feeds. This is all my configuration which I keep in a `.sh` file which I can easily run to apply:
+
+[Firewalld](https://firewalld.org/) is truly great and easy to use. The main idea is that changes get applied immediately in the runtime environment without service restart. I am not an expert on this, so I got a bare bones configuration blacklisting all connections and selectively allowing only the ones I needed. On top of that, I enabled masquerading (network address translation) to allow Freshrss to download the feeds. This is all my configuration which I keep in a `.sh` file applied by simpling running it in a shell:
+
 ```sh
 echo "==> Enabling firewalld"
 systemctl enable --now firewalld
@@ -312,11 +304,14 @@ firewall-cmd --permanent --zone=public --add-port=3478/udp
 echo "==> Reloading firewall rules"
 firewall-cmd --reload
 ```
-The main idea is setting the default zone to public so that all connections are blocked by default. Then, add essential connections to the public zone to allow them. Very simple setup, again, I am not good at this stuff.
+
+The main idea is setting the default zone to public so that all connections get blocked by default. Then, add essential connections to the public zone to allow them. A simple setup, again, I am not good at this stuff.
 
 ### Deployment {#deployment}
-Deploying all this is done through a Forgejo action from my repo. Forgejo actions are Github action compatible so it is pretty straightforward to write one, you can find the full implementation [here](https://codeberg.org/dpaletti/self-hosted-services/src/branch/main/.forgejo/workflows/deploy.yaml). 
-First we checkout the repo and retrieve secrets (much like github) and paste them in the `.env` file:
+
+All this gets deployed to my VPS through a Forgejo action triggered on a main-branch push to my repo. Forgejo actions are Github action compatible so it's pretty straightforward to write one, you can find the full implementation [in the repo](https://codeberg.org/dpaletti/self-hosted-services/src/branch/main/.forgejo/workflows/deploy.yaml).
+First we check out current changes, then we retrieve secrets (much like Github) and paste them in the `.env` file:
+
 ```yaml
     steps:
       - name: Checkout repository
@@ -329,7 +324,9 @@ First we checkout the repo and retrieve secrets (much like github) and paste the
           sed -i "s|BESZEL_TOKEN=.*|BESZEL_TOKEN=${{ secrets.BESZEL_TOKEN }}|g" synced/.env
           sed -i "s|BESZEL_KEY=.*|BESZEL_KEY=${{ secrets.BESZEL_KEY }}|g" synced/.env
 ```
-Then, we sync everything to the VPS through `rsync`, this is a good example of using a github action inside a forgejo action:
+
+At this point, we sync everything to the VPS through `rsync`, this is a good example of using a Github action inside a Forgejo action:
+
 ```yaml
       - name: Sync to VPS
         uses: https://github.com/burnett01/rsync-deployments@v8
@@ -342,7 +339,9 @@ Then, we sync everything to the VPS through `rsync`, this is a good example of u
           remote_user: ${{ secrets.VPS_SSH_USER }}
           remote_key: ${{ secrets.VPS_SSH_PRIVATE_KEY }}
 ```
-Finally we apply firewall and docker config using SSH keys we are keeping as secrets:
+
+Finally we apply firewall and Docker config using SSH keys we are keeping as secrets:
+
 ```yaml
       - name: Execute deployment commands
         uses: https://github.com/appleboy/ssh-action@v1
@@ -356,7 +355,11 @@ Finally we apply firewall and docker config using SSH keys we are keeping as sec
             ./firewalld_config.sh
             docker compose up -d
 ```
-# Conclusions {#the-conclusion}
-It’s been quite a ride. This setup has been working for several months without additional tweaking. Removing platforms from my life has been really beneficial. Far lowered general internet usage, got back to discovering music and movies from long-form blogs instead of doom scrolling algorithms. Along these lines, I have also opened a [Mastodon profile](https://social.coop/@dpaletti) which helps me discovering interesting people and discussions, I have been using it with Phanpy
 
-[Yunohost](https://yunohost.org/) can be a really good tradeoff between effort and independence leaving the most with no excuses to keep using enshittified, expensive, privacy violating services.
+## Conclusions {#the-conclusion}
+
+I felt that I was spending too much time on platforms (which I was paying for) without getting much in return. User engagement optimization strategies began to feel unbearable. I don't want to waste time on these services while feeling incapable of logging out whenever I want.
+
+Along these lines, I have also opened a [Mastodon profile](https://social.coop/@dpaletti) which helps me discover interesting people and discussions without (at least for now) addictive mechanisms. I could self-host my own Mastodon instance but for now I am on [social.coop](https://social.coop) and I don't feel the need to. Keeping an instance updated is a greate deal of work and I think it does not make much sense for the time being. Maybe in a later article I will talk about how to stay on top of news, tech, science, culture, and whatnot without mainstream social media.
+
+All that said, if you want the benefit without the hassle checkout [Yunohost](https://yunohost.org/), all the services I talked about and many more are available for installation with a prebuilt solution you can host on a (rather performant) toaster.

@@ -5,7 +5,8 @@ ogType: "article"
 date: 2026-01-25
 ---
 
-# Making sense of entropies
+# Making Sense of Entropies
+
 What’s a working definition of entropy we can use across multiple contexts?
 
 The complexity stems from the vast number of definitions given formally and informally through time. We will start with the first definition and work our way through some of the more modern ones to get a sense of what we mean and what we definitely should not mean when talking about entropy.
@@ -38,7 +39,7 @@ It is a complete equilibrium that guarantees fixed entropy; every time something
 
 As we have seen, **entropy is neither disorder nor any other exotic concept (for now)**. In classical thermodynamics, entropy is “only” a way to quantify the amount of energy (as heat) we lose when we move it somewhere else.
 
-## Boltzmann and Planck (1877 - 1901): statistical mechanics {#boltzmann}
+## Boltzmann and Planck (1877 - 1901): Statistical Mechanics {#boltzmann}
 
 $$S = k \log W$$
 
@@ -76,19 +77,19 @@ This approach was rather avant-garde and weakly received by contemporary scienti
 > Since the entropy is an additive magnitude but the probability W is a multiplicative one, I simply postulated that S = k log W where k is a universal constant.
 > <cite>[Max Planck (1901). On the Law of Distribution of Energy in the Normal Spectrum](https://web.archive.org/web/20140727104625/http://axion.physics.ubc.ca/200-06/Planck-1901.html)</cite>
 
-The algebraic trick is pretty straightforward. If we have two systems with $W_1$ and $W_2$ number of arrangements, then if we merge the two systems, the number of arrangements becomes $W_1 \times W_2$. Think two dices with 6 outcomes, these two dices have 6\*6=36 possible outcomes. This is not ok for entropy, if two systems have entropy $S_1$ and $S_2$ the resulting entropy should be ${latex.inlineS_1 + S_2. It turns out that $\log(S_1S_2) = \log(S_1) + \log(S_2)$ and so the logarithm was the perfect candidate to keep entropy an ‘additive magnitude.’
+The algebraic trick is pretty straightforward. If we have two systems with $W_1$ and $W_2$ number of arrangements, then if we merge the two systems, the number of arrangements becomes $W_1 \times W_2$. Think two dices with 6 outcomes, these two dices have 6\*6=36 possible outcomes. This is not ok for entropy, if two systems have entropy $S_1$ and $S_2$ the resulting entropy should be $S_1 + S_2$. It turns out that $\log(S_1S_2) = \log(S_1) + \log(S_2)$ and so the logarithm was the perfect candidate to keep entropy an ‘additive magnitude.’
 
 **Boltzmann’s constant** (actually created by Planck) is the last piece of the puzzle. The problem here is that the original formulation of entropy from thermodynamics is measured as $J/K$ (Joule over Kelvin), it being a measure of the relationship between heat exchange (Joule) at a given temperature (Kelvin). So Planck introduced $k$ as:
 
 $$k = \frac{R}{N_a}$$
 
-where $R$ is the **molar gas constant** governing the ideal gas law:
+Where $R$ is the **molar gas constant** governing the ideal gas law:
 
 $$pV = nRT$$
 
 The product of pressure $p$ and volume $V$ is proportional to the product of amount of substance $n$ and absolute temperature $T$ through the constant $R$. $N_a$ is the **Avogadro constant** that represents the ratio between the amount of substance and the number of particles that it contains. So $k$ was constructed as the **proportionality factor that relates thermal energy of particles in a gas with the temperature of such gas**.
 
-Summing up, Boltzmann and Planck wrote a definition of entropy that is a measure of how much we can infer about the arrangement of a system on the basis of its distribution. The original definition of entropy can be derived from this one, assuming an ideal gas (non-interacting particles).
+Summing up, Boltzmann, and Planck wrote a definition of entropy that is a measure of how much we can infer about the arrangement of a system on the basis of its distribution. The original definition of entropy can be derived from this one, assuming an ideal gas (non-interacting particles).
 
 The leap from the first definition of entropy is abysmal.
 
@@ -108,11 +109,11 @@ So **entropy has a maximum**? Maybe, from this construction, it seems rather obv
 
 As we have seen, the Boltzmann-Planck formulation introduces:
 
-- **probabilities**: processes become statistical, probability theory is the new language of entropy
+- **Probabilities**: processes become statistical, probability theory is the new language of entropy.
 
-- **information**: entropy quantifies how much knowledge we can infer about a system, heat is out of the picture
+- **Information**: entropy quantifies how much knowledge we can infer about a system, heat is out of the picture.
 
-- **observer**: coarse-graining implies that an observer may choose any macrostate given what she knows about the system and what she wants to know
+- **Observer**: coarse-graining implies that an observer may choose any macrostate given what she knows about the system and what she wants to know
 
 The entropy picture changed drastically, broadening the applicability of the concept and increasing the potential pitfalls.
 
@@ -129,7 +130,7 @@ Gibbs set out to change the object of study of entropy from an individual system
 
 $X_\gamma$ is the $\gamma$-space of the ensemble, also called the phase-space or the space of all possible microstates of the system. $x_\gamma \in X_\gamma$ is the vector of positions and momenta of all the systems (e.g. particles), the **actual microstate** of the system. $\rho(x_\gamma, t)$ is a probability density (more on $\rho$ interpretation in a second) reflecting the probability at time $t$ of finding the state of one of the systems in region $R \subseteq X_\gamma$ so that we can define:
 $$p(R) = \int_R \rho(x_\gamma, t)dx_\gamma$$
-Then, Gibbs started analyzing to get extensivity when combining probabilities $\log⁡(P_1 \cdot P_2)=\log(P_1)+\log(P_2)$. In particular, he wanted to derive a property of the whole ensemble so he started studying the average value of over all systems. In general we can write an average as:
+Then, Gibbs started analyzing to get extensivity when combining probabilities $\log⁡(P_1 \cdot P_2)=\log(P_1)+\log(P_2)$. In particular, he wanted to derive a property of the whole ensemble so he started studying the average value of over every system. In general we can write an average as:
 $$\int_{\text{all space}} f(x) \rho(x)dx$$
 If we take $f(\cdot) = \eta(\cdot) = \log(\rho(\cdot))$ then we define the average value of $\eta$ over the entire phase space, that is over the combination of all possible states of all systems as:
 $$\bar{\eta}(x_\gamma, t) := \int_{X_\gamma} \rho(x_\gamma, t) \log[(x_\gamma, t)] dx_\gamma$$
@@ -138,7 +139,7 @@ $$dU = TdS - PdV$$
 where internal energy $U$ variation is expressed as a function of entropy $S$ and volume $V$ variations. So now it was straightforward to derive an entropy definition negating $\bar{\eta}$ and fixing the measurement unit by scaling for the Boltzmann-Planck constant $k$
 $$S := -k \bar{\eta}(x_\gamma, t) = -k \int_{X_\gamma} \rho(x_\gamma, t)\log[\rho(x_\gamma, t)]dx_\gamma$$
 
-It is important to note that this definition cannot be used to describe an approach to equilibrium in terms of entropy increase due to the Hamiltonian System assumption (underlying everything we said about Gibbs entropy) and Liouville’s Theorem.
+It is important to note that this definition cannot be used to describe an approach to equilibrium in terms of entropy increase due to the Hamiltonian System assumption (underlying everything we said about Gibbs entropy) and Liouville Theorem.
 
 Gibbs proposed the previous definition of entropy in ‘Elementary Principles of Statistical Mechanics’ where towards the end he identified a solution to the equilibrium problem: **coarse-graining**. In this formalism the idea is to take a partition $\omega$ of $X_\gamma$ where we get a set of cells $\omega_i$ of equal volume $\delta \omega$. The idea here is exactly the same of the grid but we are reasoning about the **continuous case**. We define the coarse-grained density as:
 $$\bar{\rho}_\omega(x_\gamma, t) := \frac{1}{\delta \omega} \int_{\omega(x_\gamma)} \rho(x'_\gamma, t)dx'_\gamma$$
@@ -146,11 +147,11 @@ where $\omega(x_\gamma)$ is the cell in which $x_\gamma$ lies. From this the coa
 $$S_{\text{CG}} = -k \int_{X_\gamma} \bar{\rho}_\omega \log(\bar{\rho}_\gamma)dx_\gamma$$
 One can prove that $S_\text{CG} \geq S$ for Gibbs entropies and so in principle these solves the equilibrium problem (maybe, not much consensus here).
 
-We have now definitely moved to **the world of probabilities**. Jaynes’s interpreted $\rho(x_\gamma, t)$ as our lack of knowlege about a microstate of a system given its macro condition. **Entropy becomes a measure of how much knowledge we lack**. Again, knowledge, perspective, and stochasticity. This entropy definition consolidated all those concepts that were already imbued in Boltzmann’s definition through a more explicit and general formalization.
+We have now definitely moved to **the world of probabilities**. Jayne's interpreted $\rho(x_\gamma, t)$ as our lack of knowledge about a microstate of a system given its macro condition. **Entropy becomes a measure of how much knowledge we lack**. Again, knowledge, perspective, and stochasticity. This entropy definition consolidated all those concepts that were already imbued in Boltzmann’s definition through a more explicit and general formalization.
 
 We have talked so much about knowledge that is now time to focus on information.
 
-## Shannon (1948): information theory {#shannon}
+## Shannon (1948): Information Theory {#shannon}
 
 $$S = - \sum_{x \in X} p(x) \log p(x)$$
 Ok, this is surprisingly similar to Gibbs’. We move from densities to discrete probabilities but this is to be expected when moving from the continuous to the discrete. This looks very much like a discretization of the previous one without the Boltzmann constant. So, what’s the role of this definition almost 50 years after the ones from Gibbs and Planck? Formalizing a theory of communication for noisy channels and compression.
@@ -176,7 +177,7 @@ Tables have turned again, **entropy can now be used to characterize any (discret
 
 The real revolution of Shannon formulation is **linking thermodynamics and information**. This led Jaynes (1957) to reconceptualize statistical mechanics through the lens of information theory. His work culminated in the **maximum entropy principle**:
 
-> the probability distribution which best represents the current state of knowledge about a system is the one with largest entropy, in the context of precisely stated prior data
+> The probability distribution which best represents the current state of knowledge about a system is the one with largest entropy, in the context of precisely stated prior data
 > <cite>[E.T. Jaynes (1957). Information Theory and Statistical Mechanics](https://bayes.wustl.edu/etj/articles/theory.1.pdf)</cite>
 
 Also said, we should always choose the distribution that is maximally noncommittal with respect to the missing information because by not doing so we would make assertions for which we have no evidence.
@@ -192,7 +193,7 @@ We are not moving that far from the previous definition (yet). **Renyi set out t
 
 Taking the limit $\alpha \rightarrow 1$ we get **Shannon’s entropy**:
 $$S_1 = - \sum_{i=1}^n p_i \log p_i$$
-Taking the limit $\alpha \rightarrow 0$ is more subtle. As $\alpha$ approaches 0 Renyi entropy increasingly weighs all events with nonzero probability more equally regardless of their probabilities. We get **Hartley or max-entropy** which simply counts the number of possibilities completely ignoring the distribution:
+Taking the limit $\alpha \rightarrow 0$ is subtler. As $\alpha$ approaches 0 Renyi entropy increasingly weighs all events with nonzero probability more equally regardless of their probabilities. We get **Hartley or max-entropy** which simply counts the number of possibilities completely ignoring the distribution:
 $$S_0 = \log n$$
 We can now get **Collision/Renyi entropy** for $\alpha=2$. This entropy is called collision entropy because it can be interpreted as the **negative logarithm of the probability that two independent random variables, both described by p, will take the same value**.:
 $$S_2 = -\log\sum_{i=1}^n p^2_i$$
@@ -202,7 +203,7 @@ As we go towards infinity the entropy is increasingly determined by the events o
 $$S_\infty =- \log \max_i p_i$$
 This entropy has numerous application in all those cases in which we need a strong guarantee on the information content of a discrete random variable.
 
-Obviously, Renyi entropy can also be employed at different $\alpha$ levels than the ones I showed here. The idea stays the same, take Shannon’s definition and bend it to accomodate different use cases.
+Obviously, Renyi entropy can also be employed at different $\alpha$ levels than the ones I showed here. The idea stays the same, take Shannon’s definition and bend it to accommodate different use cases.
 
 ## Kolmogorov-Sinai (1958): Dynamical Systems Theory {#kolmogorov}
 
@@ -239,7 +240,7 @@ which **measures the highest average amount of information that the system can p
 
 Entropy is now alive. This result is relevant because we now talk about information/entropy production through time. That’s the first definition we encounter in which system evolution is so apparent. Maybe Clausius original definition would be the closer in this regard with the integral representing an actual transformation through time.
 
-**A positive KS entropy is often linked to chaos**. Shannon information measures uncertainty and uncertainty is a form of unpredictability. A positive KS entropy means that the behaviour of the system is unpredictable. Disorder takes the stage again. I have been going on and on about disorder not being representative of any entropy definition and now a link to chaos.
+**A positive KS entropy is often linked to chaos**. Shannon information measures uncertainty and uncertainty is a form of unpredictability. A positive KS entropy means that the behavior of the system is unpredictable. Disorder takes the stage again. I have been going on and on about disorder not being representative of any entropy definition and now a link to chaos.
 
 ![Lorenz system sensitive dependence on initial conditions](../../assets/posts/lorenz-modified.png){width=70%}
 Does this seem disordered? I would not say so, maybe someone would. It is important to note that **chaos can be summarized through Lorenz words** as:
@@ -255,6 +256,6 @@ Aside from this nitpick, we made a spectacular leap. Sinai and Kolmogorov throug
 
 From Clausius all the way to Kolmogorov. We started with a definition of entropy that would not accommodate much of what we frequently say when talking about entropy. Then we found the culprit, after Boltzmann work entropy becomes a quantification of uncertainty for a given observer with a given interest in the system under scrutiny. Then, Gibbs paved the way and Shannon freed entropy from thermodynamics to make it a universal quantity. Renyi generalized Shannon’s work retaining the theoretical framework but greatly increasing the applicability. Finally, Kolmogorov and Sinai extended entropy to dynamical systems theory moving from a fixed value to entropy production rate useful for directing entropy to systems rather than transformations.
 
-Through Boltzmann lens the most actionable definition of entropy si **entropy as uncertainty**: how much we do not know about a system given what we already know and what we want to know. Entropy is linked to the observer and the interest she has in the system under scrutiny. Stochasticity introduces uncertainty about a system and we can use entropy to quantify how hard is to get more information to fill the knowledge gaps we have.
+Through Boltzmann lens the most actionable definition of entropy is **entropy as uncertainty**: how much we do not know about a system given what we already know and what we want to know. Entropy is linked to the observer and the interest she has in the system under scrutiny. Stochasticity introduces uncertainty about a system and we can use entropy to quantify how hard is to get more information to fill the knowledge gaps we have.
 
 Much more work has been done on entropy in quantum physics and cosmology for example. I think that these works have not yet entered the pop discourse (maybe for the lack of consensus) so I decided not to take them into account.
