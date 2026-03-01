@@ -2,6 +2,7 @@
 title: Entropies
 summary: "Making sense of entropies"
 ogType: "article"
+image: /assets/posts/micro_macro-modified_og.png
 date: 2026-01-25
 ---
 
