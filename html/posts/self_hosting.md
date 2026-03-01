@@ -2,7 +2,7 @@
 title: "From big to accurate tech: my self-hosted setup"
 summary: "From big to accurate tech: my self-hosted setup"
 ogType: "article"
-image: /assets/posts/self_hosted_diagram.webp
+image: /assets/posts/self_hosted_diagram_open_graph.webp
 date: 2026-02-27
 ---
 
