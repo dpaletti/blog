@@ -4,6 +4,7 @@ const markdownItKatex = require("@vscode/markdown-it-katex").default;
 const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const markdownItReplaceLink = require("markdown-it-replace-link")
 
 module.exports = function (eleventyConfig) {
   // passthrough
@@ -14,9 +15,11 @@ module.exports = function (eleventyConfig) {
   const md = markdownIt({
     html: true,
     linkify: true,
+    replaceLink: link => link.replace(/^([^/][^:]*)\.md(#[^#]+)?$/, "../$1/$2"),
   })
     .use(markdownItKatex)
-    .use(markdownItAttrs);
+    .use(markdownItAttrs)
+    .use(markdownItReplaceLink);
 
   eleventyConfig.setLibrary("md", md);
 
